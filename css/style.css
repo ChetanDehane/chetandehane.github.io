@@ -161,7 +161,7 @@ img {
 
 .welcome-section > p {
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: bold;
   font-style: italic;
   color: var(--main-green);
 }
@@ -406,6 +406,7 @@ img {
 
 .contribution-section-header > p {
   font-style: italic;
+  font-weight: bold;
 }
 
 .contribution-links {
