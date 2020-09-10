@@ -120,7 +120,6 @@ img {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
-
 .nav-list {
   display: flex;
   margin-right: 2rem;
@@ -213,6 +212,7 @@ img {
 }
 
 #myDIV {
+  display: none;
   width: 100%;
   padding: 3% 2%;
   text-align: center;
@@ -234,6 +234,7 @@ img {
 }
 .welcome-section dd{
   color:orange;
+  text-decoration: underline;
   font-size: 100%;
   padding: 2%;
 }
@@ -247,7 +248,7 @@ img {
 }
 
 .projects-section-header {
-  max-width: 640px;
+  max-width: 30rem;
   margin: 0 auto 1em auto;
   border-bottom: 0.4rem solid var(--main-white);
 }
@@ -390,6 +391,7 @@ img {
   padding: 0 2rem;
   background: var(--main-gray);
   border-top: 4px solid var(--main-red);
+  margin:2% 0;
 }
 
 .contribution-section-header > h2 {
