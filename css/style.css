@@ -4,6 +4,7 @@
   --main-red: #be3144;
   --main-blue: #45567d;
   --main-gray: #303841;
+  --main-gray: #4CAF50;
 }
 
 /* Base reset */
@@ -115,7 +116,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-red);
+  background: var(--main-green);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
@@ -170,13 +171,13 @@ img {
   width: 20%;
   display: block;
   margin-left:auto;
-  margin-right:auto;  
+  margin-right:auto;
   margin-bottom: 2%;
   border-radius: 50%;
 }
 .button {
   position: relative;
-  background-color: #4CAF50;
+  background-color: var(--main-red);
   border: 2px solid #ffffff ;
   border-radius: 3px;
   font-size: 28px;
@@ -188,7 +189,7 @@ img {
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  margin-top: 4%; 
+  margin-top: 4%;
 }
 
 .button:after {
