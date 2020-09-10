@@ -4,7 +4,7 @@
   --main-red: #be3144;
   --main-blue: #45567d;
   --main-gray: #303841;
-  --main-gray: #4CAF50;
+  --main-green: #4CAF50;
 }
 
 /* Base reset */
@@ -49,21 +49,21 @@ html {
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
-    font-size: 60%;
+    font-size: 62%;
   }
 }
 
 /* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
   html {
-    font-size: 58%;
+    font-size: 60%;
   }
 }
 
 /* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
   html {
-    font-size: 56%;
+    font-size: 58%;
   }
 }
 
@@ -155,7 +155,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 200vh;
+  height: 120rem;
   background-color: #000;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
@@ -164,7 +164,7 @@ img {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-red);
+  color: var(--main-green);
 }
 .profile-pic
 {
