@@ -49,21 +49,30 @@ html {
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
-    font-size: 62%;
+    font-size: 60%;
   }
 }
 
 /* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
   html {
-    font-size: 60%;
+    font-size: 58%;
   }
 }
 
 /* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
   html {
-    font-size: 70%;
+    font-size: 54%;
+  }
+}
+
+/* 320px/16 = 20em */
+@media(max-width: 20em)
+{
+  html
+  {
+    font-size: 52%;
   }
 }
 
@@ -137,7 +146,7 @@ img {
 
 .nav-list a {
   display: block;
-  font-size: 2.2rem;
+  font-size: 3.0rem;
   padding: 2rem;
 }
 
@@ -161,8 +170,9 @@ img {
 
 .welcome-section > p {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: bolder;
   font-style: italic;
+  text-align: center;
   color: var(--main-green);
 }
 .profile-pic
@@ -217,6 +227,7 @@ img {
   padding: 3% 2%;
   text-align: center;
   margin-top: 2%;
+  font-size: 2.5rem;
 }
 
 .download-button {
@@ -235,7 +246,7 @@ img {
 .welcome-section dd{
   color:orange;
   text-decoration: underline;
-  font-size: 100%;
+  font-size: 2.5rem;
   padding: 2%;
 }
 
@@ -255,7 +266,7 @@ img {
 
 @media (max-width: 28.75em) {
   .projects-section-header {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 
@@ -302,7 +313,7 @@ img {
 }
 
 .project-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 2rem 0.5rem;
 }
 
@@ -341,8 +352,8 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 60vh;
-  padding: 0 2rem;
+  height: 60rem;
+  padding: 0 1rem;
   background: var(--main-gray);
 }
 
@@ -379,6 +390,11 @@ img {
   transform: translateY(8px);
 }
 
+#profile-link{
+  font-size: 3rem;
+  padding: 1rem 2rem;
+}
+
 /* contribution section */
 .contribution-section{
   display: flex;
@@ -387,11 +403,11 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 20vh;
+  height: 20rem;
   padding: 0 2rem;
   background: var(--main-gray);
-  border-top: 4px solid var(--main-red);
-  margin:2% 0;
+  border-top: 6px double var(--main-green);
+  
 }
 
 .contribution-section-header > h2 {
@@ -407,6 +423,8 @@ img {
 .contribution-section-header > p {
   font-style: italic;
   font-weight: bold;
+  font-size: 3rem;
+  margin-top: 6rem;
 }
 
 .contribution-links {
@@ -414,7 +432,8 @@ img {
   justify-content: center;
   width: 100%;
   max-width: 980px;
-  margin-top: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
@@ -427,6 +446,10 @@ img {
 .contribution-details:hover {
   transform: translateY(8px);
 }
+#contribution-link{
+  font-size: 3rem;
+  padding: 1rem 3rem;
+}
 /* Footer */
 
 footer {
@@ -435,11 +458,11 @@ footer {
   justify-content: space-evenly;
   padding: 2rem;
   background: var(--main-gray);
-  border-top: 4px solid var(--main-red);
+  border-top: 6px double var(--main-green);
 }
 
 footer > p {
-  margin: 2rem;
+  
 }
 
 footer i {
