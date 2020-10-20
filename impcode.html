@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>basic imp code</title>
+
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+  rel="stylesheet"
+/>
+	<link href="css/prism.css" rel="stylesheet" />
+
+
+</head>
+<body>
+	<div class="basic code">
+	<h2>Basic Imp code for serviced Based company</h2>
+<pre>
+    <code>
+      //positive or negative number program.
+			
+#include&lt;iostream&gt;
+using namespace std;
+string number(int n)
+{
+    if(n&gt;=0)
+    	{
+        	return "positive";
+    	}
+    	else
+    	{
+       		return "negative";
+    	}
+}
+int main()
+{
+    	int num;
+    	cin&gt;&gt;num;
+    	cout&lt;&lt;number(num);
+  		return 0;
+ }
+
+		
+
+
+ even or odd number program.
+
+#include&lt;iostream&gt;
+using namespace std;
+string evenodd(int n)
+{
+    if(n%2==0)
+    {
+        return "even";
+    }
+    else
+    {
+        return "odd";
+    }
+}
+int main()
+{
+    int num;
+    cin&gt;&gt;num;
+    cout&lt;&lt;evenodd(num);
+    return 0;
+}
+
+
+// sum of first natural number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int SumOfNaturalNumber(int n)
+{
+    int sum;
+    sum = n*(n + 1)/2;
+    return sum;
+}
+int main()
+{
+    int number;
+    cin&gt;&gt;number;
+    cout&lt;&lt;SumOfNaturalNumber(number);
+    return 0;
+}
+
+
+// sum of n natural no in given range.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int SumOfNumberInRange(int n1,int n2)
+{
+    int sum=0;
+    for(int i = n1 ; i &lt;= n2 ; i++)
+    {
+        sum=sum+i;
+    }
+    return sum;
+}
+int main()
+{
+    int number1,number2;
+    cin&gt;&gt;number1&gt;&gt;number2;
+    cout&lt;&lt;SumOfNumberInRange(number1,number2);
+    return 0;
+}
+
+
+// greatest of 2 numbers.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string GreatestNumber(int n1,int n2)
+{
+    if(n1&gt;n2)
+    {
+        return "n1 is greater";
+    }
+    else if(n1==n2)
+    {
+        return "n1 and n2 is equal";
+    }
+    else
+    {
+        return "n2 is greater";
+    }
+}
+int main()
+{
+    int n1,n2;
+    cin&gt;&gt;n1&gt;&gt;n2;
+    cout&lt;&lt;GreatestNumber(n1,n2);
+    return 0;
+}
+
+
+// greatest of 3 number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string GreatestOfThreeNumber(int n1,int n2,int n3)
+{
+    if(n1&gt;n2&amp;&amp;n1&gt;n3)
+    {
+        return "n1 is greater";
+    }
+    else if(n2&gt;n3)
+    {
+        return "n2 is greater";
+    }
+    else
+    {
+        return "n3 is greater";
+    }
+}
+int main()
+{
+    int n1,n2,n3;
+    cin&gt;&gt;n1&gt;&gt;n2&gt;&gt;n3;
+    cout&lt;&lt;GreatestOfThreeNumber(n1,n2,n3);
+    return 0;
+}
+
+
+// leap year or not.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string leapyear(int n)
+{
+    if((n%4==0)&amp;&amp;(n%100!=0)||(n%400==0))
+    {
+        return "leap year";
+    }
+    else
+    {
+        return "not leap year";
+    }
+}
+int main()
+{
+    int year;
+    cin&gt;&gt;year;
+    cout&lt;&lt;leapyear(year);
+    return 0;
+}
+
+
+// prime or not.
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+string prime(int n)
+{
+    for(int i = 2 ; i &lt;=sqrt(n) ; i++)
+    {
+        if(n%i==0)
+        {
+            return "not prime";
+        }
+    }
+    return "prime";
+}
+int main()
+{
+    int number;
+    cin&gt;&gt;number;
+    cout&lt;&lt;prime(number);
+    return 0;
+}
+
+
+// prime number in given range.
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+void prime(int n1,int n2)
+{
+
+    for(int i = n1 ; i &lt;= n2 ;i++)
+    {
+        int flag=0;
+        for(int j = 2 ; j &lt;=sqrt(i) ; j++)
+            {
+                if(i%j==0)
+                    {
+                        flag=1;
+                        break;
+                    }
+
+            }
+        if(flag==0)
+            {
+                cout&lt;&lt;i&lt;&lt;" ";
+            }
+    }
+}
+int main()
+{
+    int n1,n2;
+    cin&gt;&gt;n1&gt;&gt;n2;
+    prime(n1,n2);
+    return 0;
+}
+
+
+// sum of digits of a number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int SumOfDigit(int n)
+{
+    int sum=0,rem;  // for calculating no of digit formula is K = floor(log10(N) + 1)
+
+    while(n&gt;0)
+    {
+        rem=n%10;
+        sum=sum+rem;
+        n=n/10;
+    }
+    return sum;
+}
+int main()
+{
+    int num;
+    cin&gt;&gt;num;
+    cout&lt;&lt;SumOfDigit(num);
+    return 0;
+}
+
+
+// reverse the number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int ReverseNo(int n)
+{
+    int rev=0,rem;
+
+    while(n&gt;0)
+    {
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    return rev;
+}
+int main()
+{
+    int num;
+    cin&gt;&gt;num;
+    cout&lt;&lt;ReverseNo(num);
+    return 0;
+}
+
+// Palindrome (if the reverse of that number is equal to the original number).
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string Palindrome(int n)
+{
+    int temp=n;
+    int rev=0,rem;
+
+    while(n&gt;0)
+    {
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    if(temp==rev)
+        return "Palindrome";
+    else
+        return "Not Palindrome";
+}
+int main()
+{
+    int num;
+    cin&gt;&gt;num;
+    cout&lt;&lt;Palindrome(num);
+    return 0;
+}
+
+// Armstrong number (the sum of its own digits,each raised to the power 3).
+// Narcissistic number(sum of its own digits each raised to the power of the number of digits).
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+string Armstrong(int n)
+{
+    int pw = floor(log10(n) + 1);
+    int sum=0,rem;
+    int temp=n;
+    while(n&gt;0)
+    {
+        rem=n%10;
+        sum=sum+pow(rem,3);
+        n=n/10;
+    }
+    if(temp==sum)
+        return "Armstrong";
+    else
+        return "Not Armstrong";
+}
+int main()
+{
+    int num;
+    cin&gt;&gt;num;
+    cout&lt;&lt;Armstrong(num);
+    return 0;
+}
+
+
+// Armstrong number in given range.
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+void Armstrong(int n)
+{
+    int pw = floor(log10(n) + 1);
+    int sum=0,rem;
+    int temp=n;
+    while(n&gt;0)
+    {
+        rem=n%10;
+        sum=sum+pow(rem,3);
+        n=n/10;
+    }
+
+    if(temp==sum)
+        cout&lt;&lt;temp&lt;&lt;endl;
+
+}
+int main()
+{
+    int num1,num2;
+    cin&gt;&gt;num1&gt;&gt;num2;
+    for(int i=num1;i&lt;=num2;i++)
+        Armstrong(i);
+    return 0;
+}
+
+
+// fibonaci series of nth term.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+void fibonacci(int n)
+{
+    int first=0, second=1, next;
+    for(int i = 0;i &lt; n; i++)
+    {
+        if (i &lt;= 1)
+            next = i;
+        else
+            {
+                next = first + second;
+                first = second;
+                second = next;
+            }
+
+        if(next&gt;=n)
+            break;
+        else
+            cout&lt;&lt;next&lt;&lt;" ";
+    }
+}
+int main()
+{
+    int num;
+    cin&gt;&gt;num;
+    fibonacci(num);
+    return 0;
+}
+
+
+// factorial of number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+
+int factorial(int n)
+{
+    int fact=1;
+    for(int i=1;i&lt;=n;i++)
+    {
+        fact=fact*i;
+    }
+    return fact;
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;factorial(no);
+    return 0;
+}
+
+
+// power of number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int power(int no,int pow)
+{
+    int ans=1;
+    while(pow&gt;0)
+    {
+        ans=ans*no;
+        pow--;
+    }
+    return ans;
+}
+int main()
+{
+    int no,pow;
+    cin&gt;&gt;no&gt;&gt;pow;
+    cout&lt;&lt;power(no,pow);
+    return 0;
+}
+
+
+// factor of a number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+void factor(int n)
+{
+    for(int i=1;i&lt;=n;i++)
+    {
+        if(n%i==0)
+        {
+            cout&lt;&lt;i&lt;&lt;" ";
+        }
+    }
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    factor(no);
+    return 0;
+}
+
+// strong number(the sum of factorial of individual digits of the numbers is equal to the number itself.).
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int factorial(int n)
+{
+    int fact=1;
+    for(int i=n;i&gt;0;i--)
+    {
+        fact=fact*i;
+    }
+    return fact;
+}
+
+string strong(int n)
+{
+    int ans=0,rem,temp;
+    temp=n;
+    while(n&gt;0)
+    {
+        rem=n%10;
+        ans=ans+factorial(rem);
+        n=n/10;
+    }
+    if(ans==temp)
+    {
+        return "strong number";
+    }
+    else
+    {
+        return "not strong number";
+    }
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;strong(no);
+    return 0;
+}
+
+
+// Perfect number(sum of the proper positive divisors of the number is equal to the number itself.).
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string perfect(int n)
+{
+    int sum=0;
+    for(int i=1;i&lt;=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            sum=sum+i;
+        }
+    }
+    if(sum==n)
+    {
+        return "Perfect number";
+    }
+    else
+    {
+        return "Not Perfect number";
+    }
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;perfect(no);
+    return 0;
+}
+
+
+// Automorphic number(the last digits of the square of the number is equal to the number itself).
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+string automorphic(int n)
+{
+    int square=pow(n,2),flag=0;
+    while(square&gt;0&amp;&amp;n&gt;0)
+    {
+        if(square%10==n%10)
+        {
+            flag=1;
+        }
+        else
+        {
+            flag=0;
+            break;
+        }
+        square/=10;
+        n/=10;
+    }
+    if(flag==1)
+    {
+        return "Automorphic number";
+    }
+    else
+    {
+        return "Not Automorphic number";
+    }
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;automorphic(no);
+    return 0;
+}
+
+
+
+// Harshad number(positive integer which is divisible by the sum of the digits of the integer. It is also called the Niven number).
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string harshad(int n)
+{
+    int rem,sum=0,temp=n;
+    while(n&gt;0)
+    {
+        rem=n%10;
+        sum=sum+rem;
+        n=n/10;
+    }
+    if(temp%sum==0)
+    {
+        return "Harshad number";
+    }
+    else
+    {
+        return "Not Harshad number";
+    }
+}
+
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;harshad(no);
+    return 0;
+}
+
+
+
+// Abundant number(the sum of the proper divisors of the number is greater than the number itself).
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string abundunt(int n)
+{
+    int sum=0;
+    for(int i=1;i&lt;=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            sum=sum+i;
+        }
+    }
+    if(sum&gt;n)
+    {
+        return "Abundant number";
+    }
+    else
+    {
+        return "Not Abundant number";
+    }
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;abundunt(no);
+    return 0;
+}
+
+
+
+// Friendly pair(Amicable numbers are two different numbers related in a way such that the sum of the proper divisors of each is equal to the other number).
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string FriendlyPair(int n1,int n2)
+{
+    int n=n1&gt;n2?n1:n2;
+    int sum1=0,sum2=0;
+    for(int i=1;i&lt;=n/2;i++)
+    {
+        if(n1%i==0)
+        {
+            sum1=sum1+i;
+        }
+        if(n2%i==0)
+        {
+            sum2=sum2+i;
+        }
+    }
+    if(sum1==n2&amp;&amp;sum2==n1)
+    {
+        return "Friendly Pair";
+    }
+    else
+    {
+        return "Not Friendly Pair";
+    }
+}
+int main()
+{
+    int no1,no2;
+    cin&gt;&gt;no1&gt;&gt;no2;
+    cout&lt;&lt;FriendlyPair(no1,no2);
+    return 0;
+}
+
+
+// gcd or hcf of a two numeber.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int gcd(int a,int b)
+{
+    if(a==0)
+        return b;
+    else
+        return gcd(b%a,a);
+}
+int main()
+{
+    int no1,no2;
+    cin&gt;&gt;no1&gt;&gt;no2;
+    cout&lt;&lt;gcd(no1,no2);
+    return 0;
+}
+
+
+// LCM of two number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int findLCM(int first, int second)
+{
+       static int fact = first;
+       if(fact % first == 0 &amp;&amp; fact % second == 0)
+       {
+           return fact;
+       }
+       else
+       {
+           fact=fact + first;
+           findLCM(first,second);
+       }
+       return fact;
+}
+int main()
+{
+    int no1,no2;
+    cin&gt;&gt;no1&gt;&gt;no2;
+    cout&lt;&lt;findLCM(no1,no2);
+    return 0;
+}
+
+
+// binary to decimal conversion.
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+int binarytodecimal(int n)
+{
+    int rem,ans=0,pw=0;
+    while(n&gt;0)
+    {
+        rem=n%10;
+        ans=ans+rem*pow(2,pw);
+        pw++;
+        n=n/10;
+    }
+    return ans;
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;binarytodecimal(no);
+    return 0;
+}
+
+
+
+// binary to octal conversion.
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+int binarytooctal(int n)
+{
+    int rem,ans=0,pw=0,oct=0;
+    while(n&gt;0)
+    {
+        rem=n%10;
+        ans=ans+rem*pow(2,pw);
+        pw++;
+        n=n/10;
+    }
+    int i=1;
+    while(ans&gt;0)
+    {
+        oct=oct+(ans%8)*i;
+        ans=ans/8;
+        i=i*10;
+    }
+    return oct;
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;binarytooctal(no);
+    return 0;
+}
+
+    </code>
+  </pre>
+	<script src="js/prism.js"></script>
+	</div>
+
+</body>
+</html>
