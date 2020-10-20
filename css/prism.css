@@ -5,7 +5,11 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-
+@media (max-width: 28.75em) {
+  html {
+    font-size: 54%;
+  }
+}
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;

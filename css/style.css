@@ -261,7 +261,6 @@ img {
 .projects-section-header {
   max-width: 30rem;
   margin: 0 auto 1em auto;
-  border-bottom: 0.4rem solid var(--main-white);
 }
 
 @media (max-width: 28.75em) {
@@ -342,6 +341,33 @@ img {
   transform: translateX(0);
   transition: transform 0.3s ease-out;
 }
+/* programing section */
+
+.programing-section {
+  background: #626e82;
+  text-align: center;
+  padding: 10rem 2rem;
+ 
+}
+
+.programing-section-header {
+  max-width: 70rem;
+  margin: 0 auto 1em auto;
+}
+
+@media (max-width: 28.75em) {
+  .programing-section-header {
+    font-size: 5rem;
+  }
+}
+.programing-section:hover .code {
+  color: #ff7f50;
+}
+
+
+
+
+
 
 /* Contact section */
 
