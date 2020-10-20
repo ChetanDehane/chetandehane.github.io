@@ -16,12 +16,13 @@
 
 
 </head>
-<body>
+<body bgcolor="#45567d" style="color: #a6b600;font-family:'Raleway', 'sans-serif' ">
 	<div class="basic code">
 	<h2>Basic Imp code for serviced Based company</h2>
 <pre>
-    <code>
-      //positive or negative number program.
+<code  class="language-c++">
+
+1.positive or negative number program.
 			
 #include&lt;iostream&gt;
 using namespace std;
@@ -46,8 +47,7 @@ int main()
 
 		
 
-
- even or odd number program.
+2.even or odd number program.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -71,7 +71,7 @@ int main()
 }
 
 
-// sum of first natural number.
+3.sum of first natural number.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -91,7 +91,7 @@ int main()
 }
 
 
-// sum of n natural no in given range.
+4.sum of n natural no in given range.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -114,7 +114,7 @@ int main()
 }
 
 
-// greatest of 2 numbers.
+5.greatest of 2 numbers.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -143,7 +143,7 @@ int main()
 }
 
 
-// greatest of 3 number.
+6.greatest of 3 number.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -172,7 +172,7 @@ int main()
 }
 
 
-// leap year or not.
+7.leap year or not.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -197,7 +197,7 @@ int main()
 }
 
 
-// prime or not.
+8.prime or not.
 
 #include&lt;iostream&gt;
 #include&lt;cmath&gt;
@@ -223,7 +223,7 @@ int main()
 }
 
 
-// prime number in given range.
+9.prime number in given range.
 
 #include&lt;iostream&gt;
 #include&lt;cmath&gt;
@@ -259,7 +259,7 @@ int main()
 }
 
 
-// sum of digits of a number.
+10.sum of digits of a number.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -285,7 +285,7 @@ int main()
 }
 
 
-// reverse the number.
+11.reverse the number.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -310,7 +310,7 @@ int main()
     return 0;
 }
 
-// Palindrome (if the reverse of that number is equal to the original number).
+12.Palindrome (if the reverse of that number is equal to the original number).
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -339,8 +339,7 @@ int main()
     return 0;
 }
 
-// Armstrong number (the sum of its own digits,each raised to the power 3).
-// Narcissistic number(sum of its own digits each raised to the power of the number of digits).
+13.Narcissistic number(sum of its own digits each raised to the power of the number of digits).
 
 #include&lt;iostream&gt;
 #include&lt;cmath&gt;
@@ -354,7 +353,7 @@ string Armstrong(int n)
     while(n&gt;0)
     {
         rem=n%10;
-        sum=sum+pow(rem,3);
+        sum=sum+pow(rem,pw);
         n=n/10;
     }
     if(temp==sum)
@@ -371,7 +370,7 @@ int main()
 }
 
 
-// Armstrong number in given range.
+14.Armstrong number (the sum of its own digits,each raised to the power 3).
 
 #include&lt;iostream&gt;
 #include&lt;cmath&gt;
@@ -379,7 +378,6 @@ using namespace std;
 
 void Armstrong(int n)
 {
-    int pw = floor(log10(n) + 1);
     int sum=0,rem;
     int temp=n;
     while(n&gt;0)
@@ -403,7 +401,7 @@ int main()
 }
 
 
-// fibonaci series of nth term.
+15.fibonaci series of nth term.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -437,7 +435,7 @@ int main()
 }
 
 
-// factorial of number.
+16.factorial of number.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -461,7 +459,7 @@ int main()
 }
 
 
-// power of number.
+17.power of number.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -485,7 +483,7 @@ int main()
 }
 
 
-// factor of a number.
+18.factor of a number.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -508,7 +506,7 @@ int main()
     return 0;
 }
 
-// strong number(the sum of factorial of individual digits of the numbers is equal to the number itself.).
+19.strong number(the sum of factorial of individual digits of the numbers is equal to the number itself.).
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -551,7 +549,7 @@ int main()
 }
 
 
-// Perfect number(sum of the proper positive divisors of the number is equal to the number itself.).
+20.Perfect number(sum of the proper positive divisors of the number is equal to the number itself.).
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -584,7 +582,7 @@ int main()
 }
 
 
-// Automorphic number(the last digits of the square of the number is equal to the number itself).
+21.Automorphic number(the last digits of the square of the number is equal to the number itself).
 
 #include&lt;iostream&gt;
 #include&lt;cmath&gt;
@@ -626,7 +624,7 @@ int main()
 
 
 
-// Harshad number(positive integer which is divisible by the sum of the digits of the integer. It is also called the Niven number).
+22.Harshad number(positive integer which is divisible by the sum of the digits of the integer. It is also called the Niven number).
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -660,7 +658,7 @@ int main()
 
 
 
-// Abundant number(the sum of the proper divisors of the number is greater than the number itself).
+23.Abundant number(the sum of the proper divisors of the number is greater than the number itself).
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -694,7 +692,8 @@ int main()
 
 
 
-// Friendly pair(Amicable numbers are two different numbers related in a way such that the sum of the proper divisors of each is equal to the other number).
+24.Friendly pair(Amicable numbers are two different numbers related in a way such that the sum of the proper divisors of each is equal to    
+the other number).
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -732,7 +731,7 @@ int main()
 }
 
 
-// gcd or hcf of a two numeber.
+25.gcd or hcf of a two numeber.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -753,7 +752,7 @@ int main()
 }
 
 
-// LCM of two number.
+26.LCM of two number.
 
 #include&lt;iostream&gt;
 using namespace std;
@@ -781,7 +780,7 @@ int main()
 }
 
 
-// binary to decimal conversion.
+27.binary to decimal conversion.
 
 #include&lt;iostream&gt;
 #include&lt;cmath&gt;
@@ -809,7 +808,7 @@ int main()
 
 
 
-// binary to octal conversion.
+28.binary to octal conversion.
 
 #include&lt;iostream&gt;
 #include&lt;cmath&gt;
@@ -844,8 +843,8 @@ int main()
 
     </code>
   </pre>
-	<script src="js/prism.js"></script>
+	
 	</div>
-
+ <script src="js/prism.js"></script>
 </body>
 </html>
