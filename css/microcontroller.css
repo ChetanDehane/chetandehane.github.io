@@ -1,11 +1,12 @@
 table
 {
+	text-align: center;
 	width:50%;
 	border:3px outset hsl(0, 0%, 60%);
 }
 th, td {
   border: 2px inset hsl(0, 0%, 73%) ;
-  padding: 2px;
+  padding: 5px;
   }
 table{
   margin:30px auto 50px auto;
