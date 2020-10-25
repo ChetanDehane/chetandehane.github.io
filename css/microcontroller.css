@@ -1,0 +1,27 @@
+table
+{
+	width:50%;
+	border:3px outset hsl(0, 0%, 60%);
+}
+th, td {
+  border: 2px inset hsl(0, 0%, 73%) ;
+  }
+table{
+  margin:30px auto 50px auto;
+  }
+
+  body{
+  	background-color: #f5f2f0;
+  	font-family: 'Raleway', sans-serif;
+  	margin:1%;
+  }
+  h2
+  {
+  	  font-weight:700;
+  	  font-size: x-large;
+
+  }
+  img{
+  	margin: 1%;
+  	width: auto;
+  }
