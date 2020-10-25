@@ -1,4 +1,15 @@
+html
+{
+ box-sizing: border-box;
+ scroll-behavior: smooth;
+
+}
+div
+{
+  width: 100%;
+}
 table
+
 {
 	text-align: center;
 	width:50%;
@@ -16,14 +27,19 @@ table{
   	background-color: #f5f2f0;
   	font-family: 'Raleway', sans-serif;
   	margin:1%;
+    width: fit-content;
   }
   h2
   {
-  	  font-weight:700;
+  	  font-weight:bolder;
   	  font-size: x-large;
 
   }
   img{
   	margin: 1%;
   	width: auto;
+  }
+  p{
+    margin:1%;
+    width: 100%;
   }
