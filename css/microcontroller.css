@@ -5,6 +5,7 @@ table
 }
 th, td {
   border: 2px inset hsl(0, 0%, 73%) ;
+  padding: 2px;
   }
 table{
   margin:30px auto 50px auto;
