@@ -3,10 +3,37 @@ html
  box-sizing: border-box;
  scroll-behavior: smooth;
 
+
 }
+
+#darkmodebutton {
+  display: inline-block;
+  float: right;
+  padding: 1% 2%;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius:10px;
+  box-shadow: 0 5px #999;
+}
+
+#darkmodebutton:hover {background-color: #3e8e41}
+
+#darkmodebutton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 div
 {
   width: 100%;
+ 
 }
 table
 
@@ -22,13 +49,12 @@ th, td {
 table{
   margin:30px auto 50px auto;
   }
-
   body{
-  	background-color: #f5f2f0;
-  	font-family: 'Raleway', sans-serif;
+  	font-family: 'Poppins','Raleway', sans-serif;
   	margin:1%;
     width: fit-content;
   }
+
   h2
   {
   	  font-weight:bolder;
