@@ -841,6 +841,1180 @@ int main()
     return 0;
 }
 
+
+
+29.decimal to binary.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int decimaltobinary(int n)
+{
+    int rem,ans=0,i=1;
+    while(n&gt;0)
+    {
+        rem=n%2;
+        ans=ans+rem*i;
+        i=i*10;
+        n=n/2;
+    }
+    return ans;
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;decimaltobinary(no);
+    return 0;
+
+}
+
+
+30.decimal to octal.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int decimaltooctal(int n)
+{
+    int rem,ans=0,i=1;
+    while(n&gt;0)
+    {
+        rem=n%8;
+        ans=ans+rem*i;
+        i=i*10;
+        n=n/8;
+    }
+    return ans;
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;decimaltooctal(no);
+    return 0;
+}
+
+
+
+31.octal to decimal.
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+int octaltodecimal(int n)
+{
+   int rem,ans=0,i=0;
+    while(n&gt;0)
+    {
+        rem=n%10;
+        ans=ans+rem*pow(8,i);
+        i++;
+        n=n/10;
+    }
+    return ans;
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;octaltodecimal(no);
+    return 0;
+}
+
+
+
+32.octal to binary.
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+int octaltobinary(int n)
+{
+    int rem,ans=0,bin=0,i=0;
+    while(n&gt;0)
+    {
+        rem=n%10;
+        ans=ans+rem*pow(8,i);
+        i++;
+        n=n/10;
+    }
+    i=1;
+    while(ans&gt;0)
+    {
+        rem=ans%2;
+        bin=bin+rem*i;
+        i=i*10;
+        ans=ans/2;
+    }
+    return bin;
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;octaltobinary(no);
+    return 0;
+}
+
+
+
+33.Program to find the Quadrant in which Coordinates lie.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string position(int n1,int n2)
+{
+    if(n1&gt;0&amp;&amp;n2&gt;0)
+        return "Coordinate lies in 1st Quadrant";
+    else if(n1&lt;0&amp;&amp;n2&gt;0)
+        return "Coordinate lies in 2nd Quadrant";
+    else if(n1&lt;0&amp;&amp;n2&lt;0)
+        return "Coordinate lies in 3rd Quadrant";
+    else if(n1&gt;0&amp;&amp;n2&lt;0)
+        return "Coordinate lies in 4th Quadrant";
+    else if(n1&gt;0)
+        return "Coordinate lies on Positive x-axis";
+    else if(n1&lt;0)
+        return "Coordinate lies on Negative x-axis";
+    else if(n2&gt;0)
+        return "Coordinate lies on Positive y-axis";
+    else if(n2&lt;0)
+        return "Coordinate lies on Negative y-axis";
+    else
+        return "it's an origin";
+
+}
+int main()
+{
+    int no1,no2;
+    cin&gt;&gt;no1&gt;&gt;no2;
+    cout&lt;&lt;position(no1,no2);
+    return 0;
+}
+
+
+
+
+34.find the number of ways N people can occupy R seats.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int factorial(int no)
+{
+    int fact=1;
+    for(int i = 1; i &lt;= no ; i++)
+    {
+        fact=fact*i;
+    }
+    return fact;
+}
+int permutation(int n,int r)
+{
+    int ways;
+    ways=factorial(r)/factorial(r-n);     //nPr = n! / (n-r)!
+    return ways;
+}
+int main()
+{
+    int n,r;
+    cin&gt;&gt;n&gt;&gt;r;
+    if(r&lt;n)
+    {
+        cout&lt;&lt;"Invalid input";
+    }
+    else
+    {
+        cout&lt;&lt;permutation(n,r);
+    }
+    return 0;
+}
+
+
+
+
+35.maximum number of handshakes which can happen between N number of people given the fact that any two people shake hands exactly once.
+
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int maxhandshake(int n)
+{
+    int handshake;
+    for(int i=n-1;i&gt;=1;i--)
+    {
+        handshake=handshake+i;     // instead of for loop you can use formula handshake=n(n-1)/2
+    }
+    return handshake;
+}
+int main()
+{
+    int no;
+    cin&gt;&gt;no;
+    cout&lt;&lt;maxhandshake(no);
+    return 0;
+}
+
+
+
+
+36.Addition two fraction.
+
+#include&lt;iostream&gt;
+using namespace std;
+int gcd(int a,int b)
+{
+    if(a==0)
+        return b;
+    else
+        return gcd(b%a,a);
+}
+int main()
+{
+    int num1,num2,den1,den2;
+    cin&gt;&gt;num1&gt;&gt;num2&gt;&gt;den1&gt;&gt;den2;
+    int num3 = (num1*den2)+(num2*den1);
+    int den3 = den1*den2;
+    cout&lt;&lt;num1&lt;&lt;"/"&lt;&lt;den1&lt;&lt;" + "&lt;&lt;num2&lt;&lt;"/"&lt;&lt;den2&lt;&lt;" = "&lt;&lt;num3/gcd(num3,den3)&lt;&lt;"/"&lt;&lt;den3/gcd(num3,den3);
+    return 0;
+}
+
+
+
+37.replacing all '0' with '1' in given number.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int replace_zero_with_one(int n)
+{
+
+    int new_no=0,rem;
+    if(n == 0)
+        new_no=1;
+
+    while(n&gt;0)
+    {
+        rem=n%10;
+        if(rem==0)
+        {
+            rem=1;
+        }
+        n=n/10;
+        new_no=new_no*10+rem;
+    }
+    return new_no;
+}
+int main()
+{
+   int no;
+   cin&gt;&gt;no;
+   cout&lt;&lt;replace_zero_with_one(no);
+   return 0;
+}
+
+
+
+38.Program to check whether a number be expressed as a sum of two prime numbers.
+
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+int Prime(int n)
+{
+     for(int i = 2 ; i &lt;=sqrt(n) ; i++)
+    {
+        if(n%i==0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+int main()
+{
+    int no,check=0;
+    cin&gt;&gt;no;
+    for(int i = 0 ; i &lt; no ; i++)
+    {
+        if(Prime(i))
+        {
+            if(Prime(no-i))
+                {
+                    cout&lt;&lt;no &lt;&lt;" = "&lt;&lt; i &lt;&lt;" + " &lt;&lt; no-i&lt;&lt; endl;
+                    check = 1;
+                }
+        }
+    }
+    if(check == 0)
+    {
+        cout&lt;&lt;no&lt;&lt;" cannot be expressed as the sum of two prime numbers.";
+    }
+
+    return 0;
+}
+
+
+
+39.Counting possible decoding of a given digit sequence Here we will discuss how to count all the possible decodings of a given digit sequence. 
+   Before counting the number of decodings first let’s see how the numbers are assumed to be coded.
+
+   1 = A, 2 = B, 3 = C, . . . . , 26 = Z.
+
+   Now let’s take an example for reference,
+  
+   Sequence = 131
+
+   Possible decoding (1, 3, 1,)    = ACA
+   Possible decoding (13, 1)   = MA
+   So, the total possible decodings of sequence 131 is 2.
+
+
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+
+int countDecoding(char *digit,int n)
+{
+    int decodings[n+1];
+    decodings[0]=1;
+    decodings[1]=1;
+
+    for(int i =1 ; i &lt;= n ; i++)
+    {
+        int q = digit[i]-48;
+        int p = digit[i-1]-48;
+        if(q&gt;0 &amp;&amp; q&lt;=26)
+        {
+            decodings[i+1] = decodings[i];
+        }
+        if((q+p*10) &gt; 0 &amp;&amp; (q+p*10 &lt;= 26))
+        {
+            decodings[i+1] = decodings[i+1] + decodings[i-1];
+        }
+    }
+    return decodings[n];
+}
+int main()
+{
+    char digit[20];
+    cin.getline(digit,20);
+    int n = strlen(digit);
+    cout&lt;&lt;"Number of decoding of the sequence "&lt;&lt;digit&lt;&lt;" are "&lt;&lt;countDecoding(digit,n);
+    return 0;
+}
+
+
+
+
+40.Check Character is a vowel or consonant.
+
+
+#include&lt;iostream&gt;
+using namespace std;
+string vowel(char c)
+{
+    if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+    {
+        return "it is a vowel";
+    }
+    else
+    {
+        return "it is consonant";
+    }
+}
+int main()
+{
+    char c;
+    cin&gt;&gt;c;
+    cout&lt;&lt;vowel(c);
+    return 0;
+}
+
+
+
+41.Checking whether a Character is Alphabet or Not?
+
+
+#include&lt;iostream&gt;
+using namespace std;
+
+string alphabet(char c)
+{
+    if((c &gt;= 65 &amp;&amp; c &lt;= 90) || (c &gt;= 97 &amp;&amp; c &lt;= 122))
+    {
+        return "it is an alphabet";
+    }
+    else
+    {
+        return "it is not an alphabet";
+    }
+}
+int main()
+{
+    char c;
+    cin&gt;&gt;c;
+    cout&lt;&lt;alphabet(c);
+    return 0;
+}
+
+
+
+42.C++ Program to calculate the area of a circle.
+
+#include&lt;iostream&gt;
+#define PI 3.14
+using namespace std;
+float AreaOfCircle(int r)
+{
+    float area = PI*r*r;
+    return area;
+}
+int main()
+{
+    float radius;
+    cin&gt;&gt;radius;
+    cout&lt;&lt;AreaOfCircle(radius);
+    return 0;
+}
+
+
+
+43.find ASCII value of a Character.
+
+#include&lt;iostream&gt;
+using namespace std;
+
+int ascii(char c)
+{
+    int ascii_value =  (int)c;
+    return ascii_value;
+}
+int main()
+{
+    char c;
+    cin&gt;&gt;c;
+    cout&lt;&lt;ascii(c);
+    return 0;
+}
+
+
+
+44.Number of times x digit occurs in given number.
+
+
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+
+int Occurence(string no,char digit)
+{
+    int counter = 0;
+    int i =0;
+    while(no[i]!='\0')
+    {
+        if(no[i] == digit)
+        {
+            counter++;
+        }
+        i++;
+    }
+   return counter;
+}
+int main()
+{
+    string no;
+    getline(cin,no);
+    char digit;
+    cin&gt;&gt;digit;
+    cout&lt;&lt;Occurence(no,digit);
+    return 0;
+}
+
+
+
+45.Roots of a quadratic equation.
+
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+
+void roots(int a,int b,int c)
+{
+    float val =  (b*b) -(4*a*c);
+    float root = sqrt(val);
+    if(val &gt; 0)
+    {
+        cout&lt;&lt;(-b + root)/(2*a)&lt;&lt;endl;
+        cout&lt;&lt;(-b - root)/(2*a)&lt;&lt;endl;
+    }
+    else if( val == 0)
+    {
+        cout&lt;&lt; - b/(2*a)&lt;&lt;endl;
+    }
+    else
+    {
+        cout&lt;&lt; -b /(2*a)&lt;&lt;" +i "&lt;&lt;root&lt;&lt;endl;
+        cout&lt;&lt; -b /(2*a)&lt;&lt;" -i "&lt;&lt;root&lt;&lt;endl;
+    }
+
+}
+int main()
+{
+    int a,b,c;
+    cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;
+    roots(a,b,c);
+    return 0;
+}
+
+
+
+46.smallest number in array.
+
+
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    int mini = 0;
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+        if(arr[i]&lt;mini || i == 0)
+        {
+            mini = arr[i];
+        }
+    }
+    cout&lt;&lt;mini;
+}
+
+
+
+47.second smallest number in array.
+
+#include&lt;iostream&gt;
+using namespace std;
+int sort_array(int *arr,int n)
+{
+    int temp;
+    for(int i =0 ; i &lt; n ; i++)
+    {
+        for(int j = i + 1 ; j &lt; n ; j++)
+        {
+            if(arr[i]&gt;arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr[1];
+}
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+    cout&lt;&lt;sort_array(arr,n);
+}
+
+
+
+48.largest element in the array.
+
+
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    int maxi = 0;
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+        if(arr[i]&gt;maxi || i == 0)
+        {
+            maxi = arr[i];
+        }
+    }
+    cout&lt;&lt;maxi;
+}
+
+
+
+49.smallest and largest number in array.
+
+
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    int maxi = 0;
+    int mini = 0;
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+        if(arr[i] &gt; maxi || i == 0)
+        {
+            maxi = arr[i];
+        }
+        if(arr[i] &lt; mini || i == 0)
+        {
+            mini = arr[i];
+        }
+    }
+    cout&lt;&lt;maxi&lt;&lt;endl;
+    cout&lt;&lt;mini&lt;&lt;endl;
+}
+
+
+
+50.sum of element of the array.
+
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    int sum = 0;
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+        sum = sum + arr[i];
+    }
+    cout&lt;&lt;sum;
+    return 0;
+}
+
+
+
+
+51.Reverse Array.
+
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+    for(int i = 0 , j = n - 1; i &lt; n/2 ; i++,j--)
+    {
+        arr[i] = arr[i] + arr[j];
+        arr[j] = arr[i] - arr[j];
+        arr[i] = arr[i] - arr[j];
+    }
+    for(int i = 0 ; i &lt; n ; i++)
+    {
+        cout&lt;&lt;arr[i]&lt;&lt;" ";
+    }
+    return 0;
+}
+
+
+
+
+52.sort first half array in ascending order and second half array in descending order.
+
+#include&lt;iostream&gt;
+using namespace std;
+void sort_array(int *arr,int n)
+{
+    int temp;
+    for(int i =0 ; i &lt; n ; i++)
+    {
+        for(int j = i + 1 ; j &lt; n ; j++)
+        {
+            if((arr[i]&gt;arr[j]) &amp;&amp; (i &lt; n/2))
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            else if((arr[i] &lt; arr[j]) &amp;&amp; (i &gt; n/2))
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    for(int i =0 ;i &lt; n; i++)
+    {
+        cout&lt;&lt;arr[i]&lt;&lt;" ";
+    }
+
+}
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+    sort_array(arr,n);
+    return 0;
+}
+
+
+
+53.sort an array in ascending and descending order.
+
+#include&lt;iostream&gt;
+using namespace std;
+void sort_array(int *arr,int n)
+{
+    int temp;
+
+    // ascending order
+
+    for(int i =0 ; i &lt; n ; i++)
+    {
+        for(int j = i + 1 ; j &lt; n ; j++)
+        {
+            if(arr[i] &gt; arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    for(int i =0 ;i &lt; n; i++)
+    {
+        cout&lt;&lt;arr[i]&lt;&lt;" ";
+    }
+
+    // descending order
+
+    for(int i =0 ; i &lt; n ; i++)
+    {
+        for(int j = i + 1 ; j &lt; n ; j++)
+        {
+            if(arr[i] &lt; arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    cout&lt;&lt;"\n";
+    for(int i =0 ;i &lt; n; i++)
+    {
+        cout&lt;&lt;arr[i]&lt;&lt;" ";
+    }
+
+}
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+    sort_array(arr,n);
+    return 0;
+}
+
+
+
+54.Program to count frequency of elements in an array.
+
+#include&lt;iostream&gt;
+using namespace std;
+void frequency(int *arr,int n)
+{
+    int counter;
+    for(int i = 0 ; i &lt; n ; i=i+counter)
+    {
+        counter = 0;
+        for(int j = i; j &lt; n ;j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                counter++;
+            }
+            else
+            {
+                break;
+            }
+        }
+        cout&lt;&lt;arr[i]&lt;&lt;" occurs "&lt;&lt;counter&lt;&lt;" times"&lt;&lt;endl;
+    }
+
+}
+int main()
+{
+    int n,temp;
+    cin&gt;&gt;n;
+    int arr[n];
+    for(int i = 0 ; i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+    for(int i = 0 ; i &lt; n ;i++)
+    {
+        for(int j = i+1; j &lt; n ;j++)
+        {
+            if(arr[i]&gt;arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    frequency(arr,n);
+    return 0;
+}
+
+
+
+55.the Longest Palindrome in an Array.
+
+#include&lt;iostream&gt;
+using namespace std;
+int isPalindrome(int n)
+{
+    int temp = n;
+    int rev = 0;
+    while(temp&gt;0)
+    {
+        rev = rev*10+(temp%10);
+        temp = temp/10;
+    }
+    if(rev == n)
+    {
+        return 1;
+    }
+    return 0;
+}
+int longest_palindrome(int *arr,int n)
+{
+   int temp;
+   for(int i = 0 ; i &lt; n ;i++)
+    {
+        for(int j = i+1; j &lt; n ;j++)
+        {
+            if(arr[i]&gt;arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    for(int i = n - 1; i &gt;= 0; --i)
+        {
+            if(isPalindrome(arr[i]))
+            {
+                return  arr[i];
+            }
+        }
+    return -1;
+}
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    for(int i = 0 ; i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+
+    int result = longest_palindrome(arr,n);
+    if(result == -1)
+    {
+        cout&lt;&lt;"There is no palindrome number in the array";
+    }
+    else
+    {
+        cout&lt;&lt;"longest palindrome number in the array "&lt;&lt;result;
+    }
+    return 0;
+}
+
+
+
+56.Print distinct element in an array.
+
+#include&lt;iostream&gt;
+using namespace std;
+void Distinct(int *arr,int n)
+{
+    int flag;
+    for(int i = 0 ; i &lt; n ;i++)
+    {
+        flag = 0;
+        for(int j = 0; j &lt; n ;j++)
+        {
+           if(arr[i] == arr[j] &amp;&amp; i != j)
+             {
+                 flag=1;
+                 break;
+             }
+        }
+        if(flag == 0)
+        {
+            cout&lt;&lt;arr[i]&lt;&lt;" ";
+        }
+    }
+}
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    for(int i = 0 ; i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+    Distinct(arr,n);
+    return 0;
+}
+
+
+
+57.Repeating element of an array.
+
+#include&lt;iostream&gt;
+using namespace std;
+void Repeat_element(int *arr,int n)
+{
+    for(int i = 0 ; i &lt; n ;i++)
+    {
+        for(int j = i + 1; j &lt; n ;j++)
+        {
+            if(arr[i] == arr[j] &amp;&amp; i != j)
+            {
+                cout&lt;&lt;arr[i]&lt;&lt;" ";
+                break;
+            }
+        }
+    }
+
+}
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr[n];
+    for(int i = 0 ; i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+    Repeat_element(arr,n);
+    return 0;
+}
+
+
+
+58.remove duplicate elements in Array.
+
+
+#include&lt;iostream&gt;
+using namespace std;
+
+void Remove_duplicate(int *arr,int Length )
+{
+    int i, j;
+
+    int NewLength = 1;
+
+    for(i=1; i&lt; Length; i++)
+    {
+        for(j=0; j&lt; NewLength ; j++)
+        {
+            if(arr[i] == arr[j])
+            {
+                break;
+            }
+        }
+
+        if (j==NewLength )
+        {
+            arr[NewLength++] = arr[i];
+        }
+    }
+    for(int i = 0 ; i &lt; NewLength ;i++)
+    {
+        cout&lt;&lt;arr[i]&lt;&lt;" ";
+    }
+}
+int main()
+{
+    int Length;
+    cin&gt;&gt;Length;
+    int arr[Length];
+    for(int i = 0 ;i &lt; Length ; i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+    Remove_duplicate(arr,Length);
+    return 0;
+}
+
+
+
+59.Minimum scalar product of two vector in an array.
+   (multiply the minimum values of array 1 to the maximum values of the array 2)
+
+
+#include&lt;iostream&gt;
+using namespace std;
+int MinimumScalarProduct(int *arr1,int *arr2,int n)
+{
+    int sum=0;
+    for(int i=0;i&lt;n;i++)
+    {
+        sum=sum+arr1[i]*arr2[i];
+    }
+    return sum;
+
+}
+void sort_array(int *arr1,int *arr2,int n)
+{
+    int temp;
+
+    // ascending order
+
+    for(int i =0 ; i &lt; n ; i++)
+    {
+        for(int j = i + 1 ; j &lt; n ; j++)
+        {
+            if(arr1[i] &gt; arr1[j])
+            {
+                temp = arr1[i];
+                arr1[i] = arr1[j];
+                arr1[j] = temp;
+            }
+        }
+    }
+
+    // descending order
+
+    for(int i =0 ; i &lt; n ; i++)
+    {
+        for(int j = i + 1 ; j &lt; n ; j++)
+        {
+            if(arr2[i] &lt; arr2[j])
+            {
+                temp = arr2[i];
+                arr2[i] = arr2[j];
+                arr2[j] = temp;
+            }
+        }
+    }
+}
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr1[n];
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr1[i];
+    }
+    int arr2[n];
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr2[i];
+    }
+    sort_array(arr1,arr2,n);
+    cout&lt;&lt;MinimumScalarProduct(arr1,arr2,n);
+    return 0;
+}
+
+
+
+60.Maximum scalar product of two vector.
+   (multiply the minimum values of array 1 to the minimum values of the array 2)
+
+
+#include&lt;iostream&gt;
+using namespace std;
+int MaximumScalarProduct(int *arr1,int *arr2,int n)
+{
+    int sum=0;
+    for(int i=0;i&lt;n;i++)
+    {
+        sum=sum+arr1[i]*arr2[i];
+    }
+    return sum;
+
+}
+void sort_array(int *arr,int n)
+{
+    int temp;
+
+    // ascending order
+
+    for(int i =0 ; i &lt; n ; i++)
+    {
+        for(int j = i + 1 ; j &lt; n ; j++)
+        {
+            if(arr[i] &gt; arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+
+}
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    int arr1[n];
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr1[i];
+    }
+    int arr2[n];
+    for(int i = 0 ;i &lt; n ; i++)
+    {
+        cin&gt;&gt;arr2[i];
+    }
+    sort_array(arr1,n);
+    sort_array(arr2,n);
+    cout&lt;&lt;MaximumScalarProduct(arr1,arr2,n);
+    return 0;
+}
+
+
     </code>
   </pre>
 	
