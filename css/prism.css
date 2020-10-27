@@ -5,23 +5,44 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-@media (min-width: 28.75em) {
-  html {
-    font-size: 170%;
+@media (max-width: 19em )
+{
+  html
+  {
+    font-size: 60%;
   }
 }
-@media(min-width: 61.25em)
+
+/* 320px/16 = 20em */
+@media (max-width: 28em)and(min-width: 20em )
 {
-	html{
-		font-size: 130%
-	}
+  html
+  {
+    font-size: 70%;
+  }
 }
-@media(min-width: 75em)
-{
-	html{
-		font-size: 100%;
-	}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 61em)and(min-width: 28.75em) {
+  html {
+    font-size:  80%;
+  }
 }
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 74em)and(min-width: 61.25em) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* 1200px / 16px = 75em */
+@media (min-width: 75em) {
+  html {
+    font-size: 100%;
+  }
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
