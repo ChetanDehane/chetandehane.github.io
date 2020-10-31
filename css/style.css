@@ -5,6 +5,7 @@
   --main-blue: #45567d;
   --main-gray: #303841;
   --main-green: #4CAF50;
+  --main-black: #3a3d40;
 }
 
 /* Base reset */
@@ -265,6 +266,7 @@ img {
   text-align: center;
   padding: 10rem 2rem;
   background: var(--main-blue);
+  border-top: 6px double #3a7d3d;
 }
 
 .projects-section-header {
@@ -352,6 +354,26 @@ img {
 }
 /* programing section */
 
+.programing-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--main-gray);
+  border-top: 6px double #3a7d3d;
+  border-bottom: 6px double #3a7d3d;
+
+}
+
+.programing-section-header {
+  margin: 0 auto 1em auto;
+}
+
+@media (max-width: 28.75em) {
+  .programing-section-header {
+    font-size: 5rem;
+  }
+}
+
+/* "Automagic" image grid using no media queries */
 .programing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -367,42 +389,36 @@ img {
     padding: 6rem 1rem;
   }
 
-  .programing-grid {
+  .programing-grid{
     grid-template-columns: 1fr;
   }
 }
 
-
-.programing-section {
-  background: #626e82;
-  text-align: center;
-  padding: 10rem 2rem;
- 
+.programing {
+  background: var(--main-red);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
-.programing-section-header {
-  max-width: 70rem;
-  margin: 0 auto 1em auto;
+.code {
+  color: var(--main-gray);
+  transition: color 0.3s ease-out;
 }
 
-@media (max-width: 28.75em) {
-  .programing-section-header {
-    font-size: 5rem;
-  }
-}
-.programing-section:hover .code {
-  color: #ff7f50;
+.programing:hover .code {
+  color: #1eff3b;
 }
 
-.programing-title
-{
+/*.programing-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+} */
+
+.programing-title {
   font-size: 2.5rem;
-  font-weight: bold;
+  padding: 2rem 0.5rem;
 }
-
-
-
-
 
 /* Contact section */
 
@@ -413,7 +429,6 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 60rem;
   padding: 0 1rem;
   background: var(--main-gray);
 }
@@ -428,8 +443,9 @@ img {
   }
 }
 
-.contact-section-header > p {
-  font-style: italic;
+.contact-section-header > h2 {
+  font-weight: bold;
+  margin: 4rem auto 4rem auto;
 }
 
 .contact-links {
@@ -437,7 +453,8 @@ img {
   justify-content: center;
   width: 100%;
   max-width: 980px;
-  margin-top: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
@@ -464,10 +481,9 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 20rem;
   padding: 0 2rem;
   background: var(--main-gray);
-  border-top: 6px double var(--main-green);
+  border-top: 6px double #3a7d3d;
   
 }
 
@@ -482,10 +498,9 @@ img {
 }
 
 .contribution-section-header > p {
-  font-style: italic;
   font-weight: bold;
-  font-size: 3rem;
-  margin-top: 6rem;
+  font-size: 4rem;
+  margin: 4rem auto 4rem auto;
 }
 
 .contribution-links {
@@ -519,7 +534,8 @@ footer {
   justify-content: space-evenly;
   padding: 2rem;
   background: var(--main-gray);
-  border-top: 6px double var(--main-green);
+  border-top: 6px double #3a7d3d;
+  border-bottom:6px double #3a7d3d
 }
 
 footer > p {
