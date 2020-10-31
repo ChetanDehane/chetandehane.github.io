@@ -14,6 +14,9 @@
   rel="stylesheet"
 />
 
+<link href="css/prismdark.css" rel="stylesheet">
+
+
 <link rel="stylesheet"  href="css/microcontroller.css">
 <script type="text/javascript" src="js/java.js"></script>
 </head>
@@ -279,7 +282,7 @@
 
        <h2>Code:</h2>
        <pre>
-       	<code>
+       	<code class="language-c++">
 #include &lt;p18f4520.h&gt;  //Include controller specific .h file
 
 #pragma config OSC = HS //Oscillator Selection
@@ -511,6 +514,8 @@ void LCD_write_string(static char *str)
 }
        	</code>
        </pre>
+	<script src="js/prismdark.js"></script>
+
 	</div>
 </body>
 </html>
