@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="images/jpg">
   <title>microcontroller project</title>
 
 <link
@@ -19,52 +20,83 @@
 <body style="background:white;color:black;">
 	<button id = "darkmodebutton" onclick="darkmode()">Dark Mode</button>
 	<div id="divID">
-		<h1>Implementation of LDR and Temprature Sensor</h1>
+		<h1>Implementation of LDR and Temprature Sensor on PIC microcontroller</h1>
 		<img src="images/microcontroller.jpg" alt="LDR sensor and temprature sensor Implementationon 8051">
 		<p>
 			In this project we will interfacing temprature sensor and LDR sensor and 16*2 LCD with 8051 microcontroller.
-			<h2>Components Required</h2>
+		</p>
+			<h2>Components Required:</h2>
 			<ul>
 				<li>PCB</li>
-				<li>ADC0804</li>
 				<li>16*2 LCD Display</li>
 				<li>LM35 sensor</li>
+				<li>LDR sensor</li>
 				<li>Potentiometer</li>
+				<li>Voltage regulator</li>
+				<li>LED</li>
+				<li>Buzzer</li>
 			</ul>
 			<h2>Circuit Diagram:</h2>
-			<img src="images/microcontrollercktclr.png" alt="Circuit Diagram">
-			<h2>Measuring Temprature with LM35 using 8051:</h2>
-			<p>8051 microcontroller is a 8 bit microcontroller which has 128 bytes of on chip RAM , 4K bytes of on chip ROM, two timers, one serial port and four 8bit ports. The table below shows the comparison of 8051 family members.</p>
+
+			<img src="images/microcontrollerckt.png" alt="Circuit Diagram">
+
+			<h2>Measuring Temprature and Intensity of Light with LM35 and LDR using PICF184520:</h2>
+
+			<h2>PIC18F4520:</h2>
+
+			<p>PIC18F4520 is a low-cost, low-power, high-speed 8-bit, fully-static Microcontroller unit with 40 pins, 36 of which can be used as I / O pins. It has power-on-reset (POR) and the WDT circuitry (Extended Watchdog Timer), which can be programmed for 4 ms to 131 s.</p>
+
+			<img src="images/pic18f4520.jpg" alt="PICF184520 Diagram">
+
 			<table>
 				<tr>
 				<b>
 					<th>Feature</th>
-					<th>8051</th>
+					<th>PICF184520</th>
 				</b>
 				</tr>
 				<tr>
 					<td>ROM (in bytes)</td>
-					<td>4k</td>
+					<td>32KB</td>
 				</tr>
 				<tr>
 					<td>RAM (bytes)</td>
-					<td>128</td>
+					<td>1536</td>
 				</tr>
 				<tr>
 					<td>Timers</td>
-					<td>2</td>
+					<td>4(1 x 8-bit,3 x 16-bit)</td>
 				</tr>
 				<tr>
 					<td>I/O pins</td>
-					<td>32</td>
+					<td>40</td>
 				</tr>
 				<tr>
-					<td>Serial port</td>
-					<td>1</td>
+					<td>No of I/O port</td>
+					<td>36</td>
 				</tr>
 				<tr>
-					<td>Interrupt sources</td>
-					<td>6</td>
+					<td>ADC Module</td>
+					<td>10-bit, 13-channel</td>
+				</tr>
+				<tr>
+					<td>Communication Peripherals</td>
+					<td>1 x USART,
+					    1 x SPI,
+					    1 x I2C
+					</td>
+				</tr>
+				<tr>
+					<td>External Oscillator</td>
+					<td>Up to 40Mhz</td>
+				</tr>
+				<tr>
+					<td>Internal Osclliator</td>
+					<td>8MHz, 32Khz</td>
+				</tr>
+				<tr>
+					<td>CPU Speed (MIPS)</td>
+					<td>10 MIPS</td>
 				</tr>
 			</table>
 			<h2>16*2 LCD:</h2>
@@ -218,51 +250,6 @@
 					<td>2 lines and 5*7 matrix</td>
 				</tr>
 			</table>
-			<h2>ADC0804 IC:</h2>
-			<p>
-				The ADC0804 IC is an 8-bit parallel ADC in the family of the ADC0800 series from National Semiconductor. It works with +5 volts and has a resolution of 8bits.  The step size and Vin range varies for different values of Vref/2. The table below shows the relation between Vref/2 and Vin range.
-			</p>
-			<table>
-				<tr>
-				<b>
-					<th>Vref/2(V)</th>
-					<th>Vin(V)</th>
-					<th>step size(mv)</th>
-				</b>
-				</tr>
-				<tr>
-					<td>open</td>
-					<td>0 to 5</td>
-					<td>19.53</td>
-				</tr>
-				<tr>
-					<td>2.0</td>
-					<td>0 to 4</td>
-					<td>15.62</td>
-				</tr>
-				<tr>
-					<td>1.5</td>
-					<td>0 to 3</td>
-					<td>11.71</td>
-				</tr>
-				<tr>
-					<td>1.28</td>
-					<td>0 to 2.56</td>
-					<td>10</td>
-				</tr>
-				
-			</table>
-		<p>In our case Vref/2 is connected to 1.28 volts, so step size is 10mV. For    ADC0804 step size is calculated as (2 * Vref / 2) / 256.
-           
-			<br>
-
-            Following formula is used to calculate output voltage:
-            <br>
-
-              <b>Dout = Vin / step size</b>
-              <br>
-            Where Dout is digital data output in decimal, Vin = analog input voltage and step size (resolution) is the smallest change. Learn more about ADC0804 here, also check interfacing of ADC0808 with 8051.
-        </p>
        <h2>LM35 Temperature Sensor:</h2>
        <p>
        	The LM35 is a temperature sensor whose output voltage is linearly proportional to Celsius temperature. The LM35 comes already calibrated hence requires no external calibration. It outputs 10mV for each degree of Celsius temperature.
@@ -271,222 +258,259 @@
         LM35 sensor produces voltage corresponding to temperature. This voltage is converted to digital (0 to 256) by ADC0804 and it is fed to 8051 microcontroller. 8051 microcontroller converts this digital value into temperature in degree Celsius. Then this temperature is converted into ascii form which is suitable for displaying. This ascii values are fed to 16*2 lcd which displays the temperature on its screen. This process is repeated after specified interval.
        </p>
        <img src="images/LM35-Pinout.png" alt="LM35 Diagram">
-       <h2>Code explanation:</h2>
+
+       <h2>LDR (light dependent resistor):</h2>
        <p>
-       	The complete C program for this 8051 Thermometer Project is given at the end of this project. The code is split into small meaningful chunks and explained below.<br>
+       	Two cadmium sulphide(cds) photoconductive cells with spectral responses
+		similar to that of the human eye. The cell resistance falls with increasing light
+		intensity. Applications include smoke detection, automatic lighting control,
+		batch counting and burglar alarm systems.<br>
 
-For 16*2 LCD interfacing with 8051 microcontroller , we have to define pins on which 16*2 lcd is connected to 8051 microcontroller. RS pin of 16*2 lcd is connected to P2.7 , RW pin of 16*2 lcd is connected to P2.6 and E pin of 16*2 lcd is connected to P2.5. Data pins are connected to port 0 of 8051 microcontroller.
-<br>
-<pre><code>
-sbit rs=P2^7; //Register Select(RS) pin of 16*2 lcd
-sbit rw=P2^6; //Read/Write(RW) pin of 16*2 lcd
-sbit en=P2^5; //Enable(E) pin of 16*2 lcd
-</code></pre>
-<br>
-Similarly, for ADC0804 interfacing with 8051 microcontroller, we have to define pins on which ADC0804 is connected to 8051 microcontroller. RD pin of ADC0804 is connected to P3.0, WR pin of ADC0804 is connected to P3.1 and INTR pin of ADC0804 is connected to P3.2. Data pins are connected to port 1 of 8051 microcontroller.
-<br>
-<pre><code>
-sbit rd_adc=P3^0; //Read(RD) pin of ADC0804
-sbit wr_adc=P3^1; //Write(WR) pin of ADC0804
-sbit intr_adc=P3^2; //Interrupt(INTR) pin of ADC0804​
-</code></pre>
-<br>
-Next we have to define some functions which are used in the program. Delay function is used to create specified time delay, cmdwrt function is used to send commands to 16*2 lcd display, datawrt function is used to send data to 16*2 lcd display and convert_display function is used to convert the ADC data into temperature and to display it on 16*2 lcd display.
-<br>
-<pre><code>
-void delay(unsigned int)  ; //function for creating delay
-void cmdwrt(unsigned char); //function for sending commands to 16*2 lcd display
-void datawrt(unsigned char); //function for sending data to 16*2 lcd display
-void convert_display(unsigned char); //function for converting ADC value to temperature and display it on 16*2 lcd display
-</code></pre>
-<br>
-In below part of the code, we are sending commands to 16*2 lcd. Commands such as clear display, increment cursor, force the cursor to beginning of 1st line are sent to 16*2 lcd display one by one after some specified time delay.
-<br>
-<pre><code>
+		Photoconductive cells are used in many different types of circuits and
+		applications.
+       </p>
+       <img src="images/LDR.jpg" alt="LDR Diagram">
 
-   for(i=0;i<5;i++)               //send commands to 16*2 lcd display one command at a time
-   {
-      cmdwrt(cmd[i]); //function call to send commands to 16*2 lcd display
-                  delay(1);
-   }
-In this part of the code, we are sending data to 16*2 lcd. Data to be displayed on 16*2 lcd display are sent to display one by one after some specified time delay.
+       <h2>LM7805 (voltage regulator):</h2>
+       <p>
+       	A voltage regulator is a system designed to automatically maintain a constant voltage level. A voltage regulator may use a simple feed-forward design or may include negative feedback. It may use an electromechanical mechanism, or electronic components.
+       </p>
+       <img src="images/lm7805.png" alt="LM7805 Diagram">
 
-for(i=0;i<12;i++) //send data to 16*2 lcd display one character at a time
-   {
-      datawrt(data1[i]);  //function call to send data to 16*2 lcd display
-                  delay(1);
-   }
-</code></pre>
-<br>
-In this part of the code we are converting the analog voltage produced by LM35 sensor to digital data and then it is converted to temperature and displayed on 16*2 lcd display. For ADC0804 to start the conversion we have to send a low to high pulse on WR pin of ADC0804, then we have to wait for end of conversion. INTR becomes low at the end of conversion. Once INTR becomes low, RD is made low to copy the digital data to port 0 of 8051 microcontroller. After a specified time delay, next cycle starts. This process is repeated forever.
-<br>
-<pre><code>
- 
-  while(1)    //repeat forever
-   {
-                  wr_adc=0; //send LOW to HIGH pulse on WR pin
-                  delay(1);
-                  wr_adc=1;
-                  while(intr_adc==1); //wait for End of Conversion
-                  rd_adc=0;          //make RD = 0 to read the data from ADC0804
-                  value=P1;          //copy ADC data
-                  convert_display(value); //function call to convert ADC data into temperature and display it    on     16*2 lcd display
-                  delay(1000);  //interval between every cycles
-                  rd_adc=1;            //make RD = 1 for the next cycle
-   }
-</code></pre>
-<br>
-In below part of the code , we are sending commands to 16*2 lcd display. The command is copied to port 0 of 8051 microcontroller. RS is made low for command write. RW is made low for write operation. High to low pulse is applied on enable(E) pin to start command write operation.
-<br>
-<pre><code>
-void cmdwrt (unsigned char x)
+       <h2>Code:</h2>
+       <pre>
+       	<code>
+#include &lt;p18f4520.h&gt;  //Include controller specific .h file
+
+#pragma config OSC = HS //Oscillator Selection
+#pragma config WDT = OFF //Disable Watchdog timer
+#pragma config LVP = OFF //Disable Low Voltage Programming
+#pragma config PBADEN = OFF //Disable PORTB Analog inputs
+
+
+//Declarations for LCD Connection
+#define LCD_DATA    PORTD               //LCD data port
+#define en          PORTEbits.RE2      // enable signal
+#define rw          PORTEbits.RE1      // read/write signal
+#define rs          PORTEbits.RE0     // register select signal
+#define LDR         PORTAbits.RA0 
+#define Temp        PORTAbits.RA1 
+#define led         PORTCbits.RC0   
+#define buzzer      PORTCbits.RC1 
+#define led1        PORTCbits.RC2
+ // register select signal
+
+//Function Prototypes
+unsigned int Get_ADC_Result(void);  //Function to Get ADC result after conversion
+void Start_Conversion(void);   //Function to Start of Conversion
+void msdelay (unsigned int time);  //Function to generate delay
+void init_LCD(void);     //Function to initialise the LCD  
+void LCD_command(unsigned char cmd); //Function to pass command to the LCD
+void LCD_data(unsigned char data);  //Function to write character to the LCD
+void LCD_write_string(static char *str);//Function to write string to the LCD
+
+//Start of main program
+void main()
 {
-   P0=x;  //send the command to Port 0 on which 16*2 lcd is connected
-   rs=0;  //make RS = 0 for command
-   rw=0;  //make RW = 0 for write operation
-   en=1;  //send a HIGH to LOW pulse on Enable(E) pin to start commandwrite operation
-   delay(1);
-   en=0;
-}
-</code></pre>
-<br>
-In this part of the code, we are sending data to 16*2 lcd display. The data is copied to port 0 of 8051 microcontroller. RS is made high for command write . RW is made low for write operation. High to low pulse is applied on enable(E) pin to start data write operation.
-<br>
-<pre><code>
-void datawrt (unsigned char y)
+char msg2[] = "Temp :";
+char msg3[] = "NIGHT:";
+char msg4[] = "DAY:";
+unsigned char i,i1,i2,i3, Thousands,Hundreds,Tens,Ones;
+unsigned int adc_val, k=0,adc_val11;
+unsigned long Voltage, adc_val3;
+float Voltage1, adc_val1,adc_val2;
+int result,m, j;
+float mV, Temp, Press;
+ADCON1 = 0x0F;        //Configuring the PORTE pins as digital I/O
+TRISD = 0x00;         //Configuring PORTD as output
+TRISE = 0x00;         //Configuring PORTE as output
+TRISC = 0x00;         //Configuring PORTC as output
+TRISAbits.TRISA0 = 1;   // RA0 is input
+TRISAbits.TRISA1 = 1;   // RA1 is input
+TRISAbits.TRISA2 = 1;   // RA2 is input
+ADC_Init();    // Init ADC peripheral
+init_LCD();    // Init LCD Module
+LCD_command (0x8F);   // Goto First line, 16th place of LCD
+msdelay(15);
+ LCD_command (0x07);   // Display shift left
+// LCD_write_string(msg1); // Display Message
+while(1)
 {
-   P0=y; //send the data to Port 0 on which 16*2 lcd is connected
-   rs=1; //make RS = 1 for command
-   rw=0; //make RW = 0 for write operation
-   en=1; //send a HIGH to LOW pulse on Enable(E) pin to start datawrite operation
-   delay(1);
-   en=0;
-}
-</code></pre>
-<br>
-In this part of the code, we are converting digital data into temperature and displaying it on 16*2 lcd display.
-<br>
-<pre><code>
-void convert_display(unsigned char value)
+
+  
+ if(k==0)
+ {
+ ADC_Init();    // Init ADC peripheral
+LCD_command(0x01);      // clear LCD
+   msdelay(15);
+ LCD_command(0x06);      // Shift curser right
+   msdelay(15);
+ LCD_command (0x80);   // Goto first line, 0th place of LCD
+ LCD_write_string(msg2); // Display Message
+  Start_Conversion();   //Trigger conversion
+  adc_val= Get_ADC_Result();//Get the ADC output by polling GO bit
+   
+ Voltage = (long) adc_val*500.0; //Convert Binary result into temperature
+  adc_val = Voltage /1024.0;  
+    LCD_command (0x85);   //Goto 5th place on first line of LCD
+    i1 = adc_val/100 ;///Get the Hundreds place
+  Hundreds = i1 + 0x30;  // Convert it to ASCII
+  LCD_data (Hundreds);  //Display Hundreds place
+ 
+
+i = ((adc_val)%100)/10; //Get the Tens place
+  Tens = i + 0x30;   // Convert it to ASCII
+  LCD_data (Tens);  //Display Tens place
+
+   i = adc_val%10 ;   //Get the Ones place
+  Ones = i + 30;    // Convert it to ASCII
+ LCD_data (i + 0x30);   //Display Ones place
+
+    LCD_data ('.'); // Display decimal point
+
+    LCD_data ('0'); // Display 0 digit
+   LCD_data (' '); //
+LCD_data ('D'); //
+LCD_data ('e'); //
+LCD_data ('g'); //
+LCD_data (' '); //
+   LCD_data ('C'); //
+
+if(adc_val &gt; 50)
 {
-  unsigned char x1,x2,x3;
-  cmdwrt(0xc6);  //command to set the cursor to 6th position of 2nd line on 16*2 lcd
-  x1=(value/10); //divide the value by 10 and store quotient in variable x1
-  x1=x1+(0x30); //convert variable x1 to ascii by adding 0x30
-  x2=value%10;  //divide the value by 10 and store remainder in variable x2
-  x2=x2+(0x30); //convert variable x2 to ascii by adding 0x30
-  x3=0xDF;                           //ascii value of degree(°) symbol
-  datawrt(x1);  //display temperature on 16*2 lcd display
-  datawrt(x2);
-  datawrt(x3);
-  datawrt('C');
+buzzer = 1;
+for(j=0;j&lt;6;j++)
+led1=1;
+msdelay(15);
+led1=0;
+msdelay(15);
+
 }
-</code></pre>
-</p>
-       <h2>Code</h2>
-       <pre><code>
-       	/*this program is for displaying the temperature on 16*2 lcd display using 8051 microcontroller , LM35 sensor and ADC0804*/
- 
-#include&lt;reg51.h&gt;
- 
-sbit rs=P2^7; //Register Select(RS) pin of 16*2 lcd
-sbit rw=P2^6; //Read/Write(RW) pin of 16*2 lcd
-sbit en=P2^5; //Enable(E) pin of 16*2 lcd
- 
-sbit rd_adc=P3^0; //Read(RD) pin of ADC0804
-sbit wr_adc=P3^1; //Write(WR) pin of ADC0804
-sbit intr_adc=P3^2; //Interrupt(INTR) pin of ADC0804
- 
-void delay(unsigned int)  ; //function for creating delay
-void cmdwrt(unsigned char); //function for sending commands to 16*2 lcd display
-void datawrt(unsigned char); //function for sending data to 16*2 lcd display
-void convert_display(unsigned char); //function for converting ADC value to temperature and display it on 16*2 lcd display
- 
-void main(void) //main function
+else if(adc_val &lt; 50)
 {
-   unsigned char i;
-   unsigned char cmd[]={0x38,0x01,0x06,0x0c,0x82};//16*2 lcd initialization commands
-   unsigned char data1[]="Temperature:";
-   unsigned char value;
- 
-   P1=0xFF; //make Port 1 as input port
-   P0=0x00; //make Port 0 as output port
- 
-   for(i=0;i&lt;5;i++) //send commands to 16*2 lcd display one command at a time
-   {
-      cmdwrt(cmd[i]); //function call to send commands to 16*2 lcd display
-  delay(1);
-   }
- 
-   for(i=0;i&lt;12;i++) //send data to 16*2 lcd display one character at a time
-   {
-      datawrt(data1[i]);  //function call to send data to 16*2 lcd display
-  delay(1);
-   }
- 
-   intr_adc=1; //make INTR pin as input
-   rd_adc=1;    //set RD pin HIGH
-   wr_adc=1; //set WR pin LOW
- 
-   while(1)    //repeat forever
-   {
-  wr_adc=0; //send LOW to HIGH pulse on WR pin
-  delay(1);
-  wr_adc=1;
-  while(intr_adc==1); //wait for End of Conversion
-  rd_adc=0; //make RD = 0 to read the data from ADC0804
-  value=P1; //copy ADC data
-  convert_display(value); //function call to convert ADC data into temperature and display it on     16*2 lcd display
-  delay(1000);  //interval between every cycles
-  rd_adc=1;   //make RD = 1 for the next cycle
-   }
- 
+buzzer = 0;
+led = 0;
 }
-void cmdwrt (unsigned char x)
-{ 
-   P0=x;  //send the command to Port 0 on which 16*2 lcd is connected
-   rs=0;  //make RS = 0 for command
-   rw=0;  //make RW = 0 for write operation
-   en=1;  //send a HIGH to LOW pulse on Enable(E) pin to start commandwrite operation 
-   delay(1);
-   en=0;
-}
-void datawrt (unsigned char y)
-{ 
-   P0=y; //send the data to Port 0 on which 16*2 lcd is connected
-   rs=1; //make RS = 1 for command
-   rw=0; //make RW = 0 for write operation
-   en=1; //send a HIGH to LOW pulse on Enable(E) pin to start datawrite operation
-   delay(1);
-   en=0;
-}
-void convert_display(unsigned char value)
+ k=1;
+   msdelay(100);  //Delay between conversions. It is a library function,refer delays.h file in MCC18 installation directory
+ }
+
+ else if (k==1)
+ {
+ ADC_Init1();    // Init ADC peripheral
+LCD_command (0xC0);   // Goto second line, 0th place of LCD
+  // Display Message
+  Start_Conversion();   //Trigger conversion
+
+    result = Get_ADC_Result();  // Get the humidity
+if (result &lt;100)
 {
-  unsigned char x1,x2,x3;
- 
-  cmdwrt(0xc6);  //command to set the cursor to 6th position of 2nd line on 16*2 lcd
- 
-  x1=(value/10); //divide the value by 10 and store quotient in variable x1
-  x1=x1+(0x30); //convert variable x1 to ascii by adding 0x30
-  x2=value%10; //divide the value by 10 and store remainder in variable x2
-  x2=x2+(0x30); //convert variable x2 to ascii by adding 0x30
-  x3=0xDF; //ascii value of degree(°) symbol
- 
-  datawrt(x1);  //display temperature on 16*2 lcd display
-  datawrt(x2);
-  datawrt(x3);
-  datawrt('C'); 
+led=1;
+LCD_write_string(msg3);
 }
- 
-void delay(unsigned int z)
+else
 {
-  unsigned int p,q;
-  for(p=0;p&lt;z;p++)    //repeat for 'z' times
-  {
-    for(q=0;q&lt;1375;q++);   //repeat for 1375 times
+led=0;
+LCD_write_string(msg4);
+}
+
+LCD_command (0xC9);   //Goto 9th place on second line of LCD
+i = result/1000 ;  //Get the thousands place
+ Thousands = i + 0x30;  // Convert it to ASCII
+ LCD_data (Thousands); // Display thousands place
+ 
+i = (result%1000)/100; //Get the Hundreds place
+Hundreds = i + 0x30;  // Convert it to ASCII
+LCD_data (Hundreds);  //Display Hundreds place
+ 
+ i = (result%100)/10; //Get the Tens place
+  Tens = i + 0x30;   // Convert it to ASCII
+  LCD_data (Tens);   //Display Tens place
+  
+
+ i = result%10 ;   //Get the Ones place
+  Ones = i + 30;    // Convert it to ASCII
+ LCD_data (i + 0x30);  //Display Ones place
+
+ LCD_data ('d'); // Display d
+LCD_data ('e'); // Display e
+LCD_data ('c'); // Display c
+
+  k=0;
+   msdelay(100);
   }
+
 }
-       </code></pre>
+}
+
+void Start_Conversion()
+{
+ ADCON0bits.GO=1;
+}
+
+//If you do not wish to use adc conversion interrupt you can use this
+//to do conversion manually. It assumes conversion format is right adjusted
+unsigned int Get_ADC_Result()
+{
+unsigned int ADC_Result=0;
+while(ADCON0bits.DONE);
+ ADC_Result=ADRESL;
+ ADC_Result|=((unsigned int)ADRESH) &lt;&lt; 8;
+return ADC_Result;
+}
+
+void msdelay (unsigned int time) //Function to generate delay
+{
+unsigned int i, j;
+ for (i = 0; i &lt; time; i++)
+for (j = 0; j &lt; 710; j++);//Calibrated for a 1 ms delay in MPLAB
+}
+
+
+void init_LCD(void)  // Function to initialise the LCD
+{
+    LCD_command(0x38);      // initialization of 16X2 LCD in 8bit mode
+   msdelay(15);
+    LCD_command(0x01);      // clear LCD
+   msdelay(15);
+    LCD_command(0x0C);      // cursor off
+   msdelay(15);
+    LCD_command(0x06);      // curser right shift
+   msdelay(15);
+}
+
+void LCD_command(unsigned char cmd) //Function to pass command to the LCD
+{
+    LCD_DATA = cmd;  //Send data on LCD data bus
+   rs = 0;    //RS = 0 since command to LCD
+   rw = 0;    //RW = 0 since writing to LCD
+   en = 1;    //Generate High to low pulse on EN
+   msdelay(15);
+    en = 0;
+}
+
+void LCD_data(unsigned char data)//Function to write data to the LCD
+{
+    LCD_DATA = data; //Send data on LCD data bus
+   rs = 1;    //RS = 1 since data to LCD
+   rw = 0;    //RW = 0 since writing to LCD
+   en = 1;    //Generate High to low pulse on EN
+  msdelay(15);
+    en = 0;
+}
+//Function to write string to LCD
+void LCD_write_string(static char *str)   
+{
+   int i = 0;
+   while (str[i] != 0)
+    {
+        LCD_data(str[i]);      // sending data on LCD byte by byte
+       msdelay(15);
+        i++;
+    }
+}
+       	</code>
+       </pre>
 	</div>
 </body>
 </html>
