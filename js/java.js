@@ -1,9 +1,13 @@
 function moreaboutme() {
   var x = document.getElementById('myDIV');
+  var y = document.getElementById('welcome-section');
   if (x.style.display == "block") {
     x.style.display = "none";
+     y.style.height = "90rem";
+   
   } else {
     x.style.display = "block";
+     y.style.height = "140rem";
   }
 }
 
