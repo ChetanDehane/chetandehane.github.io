@@ -21,8 +21,10 @@ body{
 
   h3
   {
-      font-weight:bolder;
-      font-size: large;
+      color: #f30065;
+     font-weight: bolder;
+     font-size: x-large;
+     text-align: center;
 
   }
 
@@ -30,9 +32,9 @@ body{
   	margin: 1%;
   	width: auto;
   }
-  p{
+ /* p{
      color: #f30065;
      font-weight: bolder;
      font-size: x-large;
      text-align: center;
-  }
+  }*/

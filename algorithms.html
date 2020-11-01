@@ -22,7 +22,7 @@
 	<h2>Searching Algorithms :</h2>
 	
 	<pre>
-		<p>Linear search (Time complexity): O(n)</p>
+		<h3>Linear search (Time complexity): O(n)</h3>
 		<code class="language-c++">
 #include&lt;iostream&gt;
 using namespace std;
@@ -61,10 +61,10 @@ int main()
     linear_search(arr,n,element);
     return 0;
 }
-	</pre></code>
+	</code></pre>
 
 <pre>
-		<p>Binary search (Time complexity): O(log n)</p>
+		<h3>Binary search (Time complexity): O(log n)</h3>
 		<code class="language-c++">
 #include&lt;iostream&gt;
 #include&lt;algorithm&gt;
@@ -125,7 +125,68 @@ int main()
     return 0;
 }
 
-	</pre></code>
+	</code></pre>
+  <h2>Sorting Algorithms : </h2>
+  <pre>
+    <h3>Bubble sort (Time complexity): O(n<sup>2</sup>)</h3>
+    <code class="language-c++">
+#include &lt;iostream&gt;
+using namespace std;
+
+void swap_arr(int *no1, int *no2)
+{
+  *no1 =  *no1 + *no2;
+  *no2 =  *no1 - *no2;
+  *no1 =  *no1 - *no2;
+}
+
+void bubbleSort(int *arr, int n)
+{
+  int i, j;
+  for (i = 0; i &lt; n-1; i++)
+    {
+        for (j = 0; j &lt; n-i-1; j++)
+        {
+            if (arr[j] &gt; arr[j+1])
+            {
+                swap_arr(&amp;arr[j], &amp;arr[j+1]);
+            }
+        }
+    }
+}
+
+void printArray(int *arr, int n)
+{
+  int i;
+  for (i = 0; i &lt; n; i++)
+    {
+    cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+  cout &lt;&lt; endl;
+}
+
+int main()
+{
+    int n;
+    cout&lt;&lt;"Enter the size of the array : ";
+  cin&gt;&gt;n;
+
+  int arr[n];
+  cout&lt;&lt;"\nEnter the elements of the array : ";
+  for(int i = 0 ;i &lt; n ;i++)
+    {
+        cin&gt;&gt;arr[i];
+    }
+
+    cout&lt;&lt;"\nBefore sort : ";
+    printArray(arr, n);
+
+  bubbleSort(arr, n);
+  cout&lt;&lt;"\nAfter sort: ";
+  printArray(arr, n);
+  return 0;
+}
+  </code></pre>
 <p>More comming soon!</p>
 </section>
 <script src="js/prismdark.js"></script>
