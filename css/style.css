@@ -47,44 +47,34 @@ html {
  * 980px / 16px = 61.25em]
 */
 
-@media (max-width: 19em )
+@media (max-width: 100em)
 {
-  html
-  {
-    font-size: 90%;
-  }
-}
-
-/* 320px/16 = 20em */
-@media (max-width: 28em)and(min-width: 20em )
-{
-  html
-  {
-    font-size: 80%;
-  }
-}
-
-/* 460px / 16px = 28.75em */
-@media (max-width: 61em)and(min-width: 28.75em) {
-  html {
-    font-size:  70%;
-  }
-}
-
-/* 980px / 16px = 61.25em */
-@media (max-width: 74em)and(min-width: 61.25em) {
-  html {
-    font-size: 60%;
+  html{
+    font-size: 50%
   }
 }
 
 /* 1200px / 16px = 75em */
-@media (min-width: 75em) {
+@media (max-width: 75em) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 35%;
+  }
+}
+
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 30%;
+  }
+}
 
 /* Base styles */
 
@@ -108,7 +98,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4.2rem;
+  font-size: 4rem;
 }
 
 ul {
@@ -173,9 +163,16 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 120rem;
+  height: 135rem;
   background-color: #000;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+@media (max-width: 28.75rem)
+{
+  .welcome-section{
+    height: 110rem;
+  }
 }
 
 .welcome-section > p {
@@ -199,7 +196,7 @@ img {
   background-color: var(--main-red);
   border: 2px solid #ffffff ;
   border-radius: 3px;
-  font-size: 28px;
+  font-size: 3.5rem;
   color: #FFFFFF;
   padding: 1% 2%;
   width: auto;
@@ -244,9 +241,9 @@ img {
   background-color: DodgerBlue;
   border: none;
   color: white;
-  padding: 12px 30px;
+  padding: 1% 3%;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 /* Darker background on mouse-over */
@@ -270,9 +267,13 @@ img {
 }
 
 .projects-section-header {
-  max-width: 30rem;
-  margin: 0 auto 1em auto;
+   margin: 0 auto 6rem auto;
 }
+
+  .projects-section-header{
+    font-size: 6rem;
+  }
+
 
 @media (max-width: 28.75em) {
   .projects-section-header {
@@ -364,7 +365,11 @@ img {
 }
 
 .programing-section-header {
-  margin: 0 auto 1em auto;
+  margin: 0 auto 6rem auto;
+}
+
+.programing-section-header {
+  font-size: 6rem;
 }
 
 @media (max-width: 28.75em) {
@@ -372,6 +377,12 @@ img {
     font-size: 5rem;
   }
 }
+
+.programing-section-header >{
+    font-weight: bold;
+  
+}
+
 
 /* "Automagic" image grid using no media queries */
 .programing-grid {
@@ -433,19 +444,16 @@ img {
   background: var(--main-gray);
 }
 
-.contact-section-header > h2 {
+.contact-section-header >h2 {
   font-size: 6rem;
+  font-weight: bold;
+  margin: 4rem auto 4rem auto;
 }
 
 @media (max-width: 28.75em) {
   .contact-section-header > h2 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
-}
-
-.contact-section-header > h2 {
-  font-weight: bold;
-  margin: 4rem auto 4rem auto;
 }
 
 .contact-links {
@@ -487,21 +495,18 @@ img {
   
 }
 
-.contribution-section-header > h2 {
+.contribution-section-header >h2 {
   font-size: 6rem;
+  font-weight: bold;
+  margin: 4rem auto 4rem auto;
 }
 
 @media (max-width: 28.75em) {
   .contribution-section-header > h2 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }
 
-.contribution-section-header > p {
-  font-weight: bold;
-  font-size: 4rem;
-  margin: 4rem auto 4rem auto;
-}
 
 .contribution-links {
   display: flex;
