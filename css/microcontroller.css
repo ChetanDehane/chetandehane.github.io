@@ -2,9 +2,8 @@ html
 {
  box-sizing: border-box;
  scroll-behavior: smooth;
-
-
 }
+
 
 #darkmodebutton {
   display: inline-block;
@@ -64,6 +63,7 @@ table{
   img{
   	margin: 1%;
   	width: auto;
+
   }
   p{
     margin:1%;
