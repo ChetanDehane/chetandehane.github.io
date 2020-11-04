@@ -171,7 +171,7 @@ img {
 .welcome-section > p {
   font-size: 3rem;
   font-weight: bolder;
-  font-style: italic;
+  font-style: inherit;
   text-align: center;
   color: var(--main-green);
 }
