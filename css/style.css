@@ -4,7 +4,7 @@
   --main-red: #be3144;
   --main-blue: #45567d;
   --main-gray: #303841;
-  --main-green: #4CAF50;
+  --main-green: #3ddc84;
   --main-black: #3a3d40;
 }
 
@@ -126,7 +126,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-green);
+  background: linear-gradient( #3ddc84 , #3ddcc7fc);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
@@ -177,7 +177,7 @@ img {
   font-weight: bolder;
   font-style: inherit;
   text-align: center;
-  color: var(--main-green);
+  color: #339bba;
 }
 .profile-pic
 {
