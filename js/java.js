@@ -31,11 +31,11 @@ if(document.body.style.backgroundColor == "white")
 }
 
 
-function navFunction() {
+/*function navFunction() {
   var x = document.getElementById("nav-ele");
   if (x.className === "nav-list") {
     x.className += " responsive";
   } else {
     x.className = "nav-list";
   }
-}
+}*/
