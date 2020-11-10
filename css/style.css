@@ -124,6 +124,7 @@ img {
     width:8.15rem;
     height:8.15rem;
     overflow:hidden;
+    background: #00000047;
 }
 .nav{
   display: flex;
