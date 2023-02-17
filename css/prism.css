@@ -5,42 +5,38 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-@media (max-width: 19em )
-{
-  html
-  {
-    font-size: 60%;
-  }
+@media (max-width: 19em) {
+	html {
+		font-size: 60%;
+	}
 }
 
 /* 320px/16 = 20em */
-@media (max-width: 28em)and(min-width: 20em )
-{
-  html
-  {
-    font-size: 70%;
-  }
+@media (max-width: 28em)and(min-width: 20em) {
+	html {
+		font-size: 70%;
+	}
 }
 
 /* 460px / 16px = 28.75em */
 @media (max-width: 61em)and(min-width: 28.75em) {
-  html {
-    font-size:  80%;
-  }
+	html {
+		font-size: 80%;
+	}
 }
 
 /* 980px / 16px = 61.25em */
 @media (max-width: 74em)and(min-width: 61.25em) {
-  html {
-    font-size: 90%;
-  }
+	html {
+		font-size: 90%;
+	}
 }
 
 /* 1200px / 16px = 75em */
 @media (min-width: 75em) {
-  html {
-    font-size: 100%;
-  }
+	html {
+		font-size: 100%;
+	}
 }
 
 code[class*="language-"],
@@ -67,19 +63,24 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
 	background: #b3d4fc;
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
 	text-shadow: none;
 	background: #b3d4fc;
 }
 
 @media print {
+
 	code[class*="language-"],
 	pre[class*="language-"] {
 		text-shadow: none;
@@ -93,13 +94,13 @@ pre[class*="language-"] {
 	overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
+:not(pre)>code[class*="language-"],
 pre[class*="language-"] {
 	background: #f5f2f0;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
@@ -170,6 +171,7 @@ pre[class*="language-"] {
 .token.bold {
 	font-weight: bold;
 }
+
 .token.italic {
 	font-style: italic;
 }
@@ -177,4 +179,3 @@ pre[class*="language-"] {
 .token.entity {
 	cursor: help;
 }
-

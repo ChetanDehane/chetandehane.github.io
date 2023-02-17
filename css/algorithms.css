@@ -1,38 +1,36 @@
-body{
-  	font-family: 'Poppins','Raleway', sans-serif;
-    background: #45567d;
-   }
+body {
+  font-family: 'Poppins', 'Raleway', sans-serif;
+  background: #45567d;
+}
 
-  h1
-  {
-    font-weight: bolder;
-    font-size: xx-large;
-    text-align: center;
-    color: #a6b600;
-  }
+h1 {
+  font-weight: bolder;
+  font-size: xx-large;
+  text-align: center;
+  color: #a6b600;
+}
 
-  h2
-  {
-  	  font-weight:bolder;
-  	  font-size: x-large;
-      color: #00b616;
+h2 {
+  font-weight: bolder;
+  font-size: x-large;
+  color: #00b616;
 
-  }
+}
 
-  h3
-  {
-      color: #f30065;
-     font-weight: bolder;
-     font-size: x-large;
-     text-align: center;
+h3 {
+  color: #f30065;
+  font-weight: bolder;
+  font-size: x-large;
+  text-align: center;
 
-  }
+}
 
-  img{
-  	margin: 1%;
-  	width: auto;
-  }
- /* p{
+img {
+  margin: 1%;
+  width: auto;
+}
+
+/* p{
      color: #f30065;
      font-weight: bolder;
      font-size: x-large;

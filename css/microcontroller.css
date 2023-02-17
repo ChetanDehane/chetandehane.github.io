@@ -1,10 +1,9 @@
+body {
 
+  font-family: 'Poppins', 'Raleway', sans-serif;
+  font-size: 1.2rem;
+}
 
-body{
-   
-    font-family: 'Poppins','Raleway', sans-serif;
-    font-size: 1.2rem;
-  }
 #darkmodebutton {
   display: inline-block;
   float: right;
@@ -17,52 +16,55 @@ body{
   color: #fff;
   background-color: #4CAF50;
   border: none;
-  border-radius:10px;
+  border-radius: 10px;
   box-shadow: 0 5px #999;
 }
 
-#darkmodebutton:hover {background-color: #3e8e41}
+#darkmodebutton:hover {
+  background-color: #3e8e41
+}
 
 #darkmodebutton:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-table
-{
-	text-align: center;
-	width:50%;
-	border:3px outset hsl(0, 0%, 60%);
+
+table {
+  text-align: center;
+  width: 50%;
+  border: 3px outset hsl(0, 0%, 60%);
 }
-th, td {
-  border: 2px inset hsl(0, 0%, 73%) ;
+
+th,
+td {
+  border: 2px inset hsl(0, 0%, 73%);
   padding: 5px;
-  }
-table{
-  margin:30px auto 50px auto;
-  }
-  
+}
 
-    h1{
-      font-size: bolder;
-      font-size: xx-large;
-    }
+table {
+  margin: 30px auto 50px auto;
+}
 
-  h2
-  {
-  	  font-weight:bolder;
-  	  font-size: x-large;
 
-  }
-  img{
-  	 max-width: 100%;
-     height: auto;
-     border: 1px solid #ddd;
-     border-radius: 4px;
-     padding: 5px;
-     display: block;
-     margin: 30px auto 30px auto;
+h1 {
+  font-size: bolder;
+  font-size: xx-large;
+}
 
-  }
- 
+h2 {
+  font-weight: bolder;
+  font-size: x-large;
 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  display: block;
+  margin: 30px auto 30px auto;
+
+}
