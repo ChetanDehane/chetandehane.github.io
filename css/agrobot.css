@@ -2,11 +2,17 @@ body {
 
   font-family: 'Poppins', 'Raleway', sans-serif;
   font-size: 1.2rem;
+  background-color: #ddd;
+}
+
+#divID {
+  padding-top: 3rem;
 }
 
 #darkmodebutton {
   display: inline-block;
-  /*float: right;*/
+  position: absolute;
+  right: 1rem;
   padding: 1% 2%;
   font-size: 1rem;
   cursor: pointer;
@@ -34,6 +40,7 @@ body {
 h1 {
   font-size: bolder;
   font-size: xx-large;
+  text-align: center;
 }
 
 h2 {
@@ -47,7 +54,7 @@ h3 {
 }
 
 img {
-  max-width: 100%;
+  width: 50%;
   height: auto;
   border: 1px solid #ddd;
   border-radius: 4px;

@@ -5,215 +5,258 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" href="images/favicon.png" type="images/jpg">
-  <script src="https://kit.fontawesome.com/e3fda1c7fa.js" crossorigin="anonymous"></script>
   <title>Chetan's Portfolio</title>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="js/java.js"></script>
-
+  <script src="https://kit.fontawesome.com/e3fda1c7fa.js" crossorigin="anonymous"></script>
 </head>
-<!-- START NAV -->
+
 
 <body>
-  <nav id="navbar" class="nav">
-    <a href="index.html"><img class="logo" src="images/favicon.png"></a>
-    <ul class="nav-list" id="nav-ele">
-      <li>
-        <a href="#welcome-section">About</a>
-      </li>
-      <li>
-        <a href="#projects">Work</a>
-      </li>
-      <li>
-        <a href="#programing">Resources</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-      <!-- <li>
-       <a href="javascript:void(0);" class="icon" onclick="navFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-    </li> -->
-    </ul>
-  </nav>
-
+  <!-- START NAV -->
+  <section class="navbar-section">
+    <nav class="navbar fixed-top navbar-expand-lg bg-light">
+      <div class="container-fluid text-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/favicon.png" class="img-fluid navbar-img" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#welcome">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#programing">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
   <!-- END NAV -->
 
   <!-- START WELCOME SECTION -->
+  <section class="welcome-section" id="welcome">
+    <div class="container-fluid text-center">
+      <h1 class="big-heading">Hey I'm Chetan</h1>
+      <p class="heading-para">a programmer</p>
+      <p>
+        <button class="btn btn-primary more-about-me-btn" type="button" data-bs-toggle="collapse" data-bs-target="#more-about-me"
+          aria-expanded="false" aria-controls="more-about-me">
+          <span>More About Me</span>
+        </button>
+      </p>
+      <div class="collapse" id="more-about-me">
+        <div class="card card-body">
+          <p><img src="images/Profile-Pic.JPG" alt="My Picture" class="img-fluid profile-pic"></p>
+          <p class="more-about-me-text">I am Chetan, and I have a confession to make - I am an engineer, but I have a
+            personality &#128578;. I
+            know it's
+            rare, but it's true. You see, most people would say that engineers are robotic, and they only understand
+            numbers, but not me. Yes, I have a Bachelor's in Electronics and Telecommunication Engineering with a
+            C.G.P.A. of 8.18, but that's just a small part of who I am.
 
-  <section id="welcome-section" class="welcome-section">
-    <h1>Hey I'm Chetan</h1>
-    <p>a programmer</p>
-    <button onclick="moreaboutme()" class="button" style="vertical-align:middle"><span>More About me</span></button>
-    <div id="myDIV">
-      <img src="images/Profile-Pic.JPG" alt="My Picture" class="profile-pic">
-      <p>I am Chetan, and I have a confession to make - I am an engineer, but I have a personality &#128578;. I
-        know it's
-        rare, but it's true. You see, most people would say that engineers are robotic, and they only understand
-        numbers, but not me. Yes, I have a Bachelor's in Electronics and Telecommunication Engineering with a
-        C.G.P.A. of 8.18, but that's just a small part of who I am.
+            When I'm not busy eating, I enjoy web development and mobile development. I guess you could say that I
+            like to add some creativity to my engineering side. And if that's not exciting enough for you, I also
+            have some cool hobbies. I like playing cricket and football, and I can even play a musical instrument.
+            I'm a well-rounded individual, you know.
 
-        When I'm not busy eating, I enjoy web development and mobile development. I guess you could say that I
-        like to add some creativity to my engineering side. And if that's not exciting enough for you, I also
-        have some cool hobbies. I like playing cricket and football, and I can even play a musical instrument.
-        I'm a well-rounded individual, you know.
+            Now, when it comes to my skills, I am a good at HTML, CSS, Javascript, C++, SQL Server, SSIS, Git, and
+            even Chat-GPT. Yes, you read that right, Chat-GPT - I can even chat with a machine, and it'll chat back.
+            for the record, chat-GPT has written this introduction for me.&#128514;&#128514;&#128514;
+            So, you see, I'm not just a boring engineer, but a multi-talented person with some mad skills.
 
-        Now, when it comes to my skills, I am a good at HTML, CSS, Javascript, C++, SQL Server, SSIS, Git, and
-        even Chat-GPT. Yes, you read that right, Chat-GPT - I can even chat with a machine, and it'll chat back.
-        for the record, chat-GPT has written this introduction for me.&#128514;&#128514;&#128514;
-        So, you see, I'm not just a boring engineer, but a multi-talented person with some mad skills.
+            if you have anything for me i would love to connect with you. &#128521;
+          </p>
 
-        if you have anything for me i would love to connect with you. &#128521;</p>
-      <a href="./resume.pdf" target="_blank" class="resume-section">
-        <dd>Resume</dd>
-      </a>
+          <div class="d-grid gap-2 col-3 mx-auto">
+            <a href="./resume.pdf" target="_blank" class="btn btn-success" role="button">
+              <i class="fa-solid fa-file"></i> Resume
+            </a>
+            <a href="resume.pdf" download="ChetanDehaneResume" class="btn btn-danger" role="button" target="_blank">
+              <i class="fa-solid fa-download"></i> Download
+            </a>
+          </div>
 
-      <button class="download-button"><i class="fa fa-download"></i><a href="resume.pdf" download="ChetanDehane"
-          target="_blank">Download</a></button>
+        </div>
+      </div>
     </div>
   </section>
-
   <!-- END WELCOME SECTION -->
 
-  <!-- START PROJECTS SECTION -->
-
-  <section id="projects" class="projects-section">
-    <h2 class="projects-section-header">My Projects</h2>
-
-    <div class="projects-grid">
-      <a href="https://chetandehane.github.io/myfirstproject/" target="_blank" class="project project-tile">
-        <img class="project-image"
-          src="https://raw.githubusercontent.com/ChetanDehane/myfirstproject/master/myfirstproject.png?raw=true"
-          alt="webpage" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          myfisrtwebpage
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-
-      <a href="microcontroller.html" target="_blank" class="project project-tile">
-        <img class="project-image"
-          src="https://github.com/ChetanDehane/chetandehane.github.io/blob/main/images/microcontroller.jpg?raw=true"
-          alt="implementation of LDR and temprature sensor" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          microcontroller project
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-
-      <a href="./mini-project.pdf" target="blank" target="_blank" class="project project-tile">
-        <img class="project-image"
-          src="https://github.com/ChetanDehane/chetandehane.github.io/blob/main/images/mini-project.jpg?raw=true"
-          alt="Gesture control robot" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          mini project
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-
-      <a href="agrobot.html" target="blank" target="_blank" class="project project-tile">
-        <img class="project-image"
-          src="https://github.com/ChetanDehane/chetandehane.github.io/blob/main/images/agrobot4.jpg?raw=true"
-          alt="Agrobot" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          major project
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-
-      <a href="https://countrydetails-angular.web.app/" target="_blank" class="project project-tile">
-        <img class="project-image"
-          src="https://github.com/ChetanDehane/Country-Detail-App/blob/master/src/assets/img/map.jpg?raw=true"
-          alt="Country Detail App" />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          Country Detail App
-          <span class="code">&gt;</span>
-        </p>
-      </a>
-
-
+  <section class="projects-section" id="projects">
+    <div class="container-fluid text-center">
+      <h2 class="section-heading">My Projects</h2>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/agrobot4.jpg" class="card-img-top project-image" alt="agrobot">
+              <div class="card-body">
+                <h3 class="card-title">AgroBot</h3>
+                <p class="card-text">Built a Agricultural robot using LPC2148 controller and ESP-32 Cam module.</p>
+                <a href="agrobot.html" target="_blank" class="btn btn-primary">view project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/dog-img.jpg" class="card-img-top project-image" alt="TinDog">
+              <div class="card-body">
+                <h3 class="card-title">TinDog</h3>
+                <p class="card-text">TinDog - Tinder for dogs UI using html, css and bootstrap.</p>
+                <a href="https://chetandehane.github.io/TinDog_TinderforDog/" target="_blank"
+                  class="btn btn-primary">view project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/tom1.png" class="card-img-top project-image" alt="TinDog">
+              <div class="card-body">
+                <h3 class="card-title">Drum Kit</h3>
+                <p class="card-text">7 types of drum sound, responsive to mouse click and keyboard key.</p>
+                <a href="https://chetandehane.github.io/Drum-Kit/" target="_blank" class="btn btn-primary">view
+                  project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/map.jpg" class="card-img-top project-image" alt="country-detail-app">
+              <div class="card-body">
+                <h3 class="card-title">Country Detail App</h3>
+                <p class="card-text">show basic details about countries e.g. name, full name, country code, flag, population etc.</p>
+                <a href="https://countrydetails-angular.web.app/" target="_blank" class="btn btn-primary">view
+                  project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/dice5.png" class="card-img-top project-image" alt="dice-game">
+              <div class="card-body">
+                <h3 class="card-title">Dice Game</h3>
+                <p class="card-text">Dice Game built using html, css, and javascript.</p>
+                <a href="https://chetandehane.github.io/DiceGame/index.html" target="_blank" class="btn btn-primary">view
+                  project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/personal-site.jpg" class="card-img-top project-image" alt="Portfolio-trial">
+              <div class="card-body">
+                <h3 class="card-title">Personal Site</h3>
+                <p class="card-text">Personal Site built using html and css.</p>
+                <a href="https://chetandehane.github.io/portfolioV2/" target="_blank" class="btn btn-primary">view
+                  project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/myfirstproject.png" class="card-img-top project-image" alt="FirstWebpage">
+              <div class="card-body">
+                <h3 class="card-title">My First Webpage</h3>
+                <p class="card-text">First Webpage consisting introduction and contact information, built using html &
+                  css only. </p>
+                <a href="https://chetandehane.github.io/myfirstproject/" target="_blank" class="btn btn-primary">view
+                  project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/microcontroller.jpg" class="card-img-top project-image"
+                alt="Implementation of LDR and temprature sensor">
+              <div class="card-body">
+                <h3 class="card-title">LDR & Temp Sensor</h3>
+                <p class="card-text">Implemented LDR and Temprature sensor using PIC microcontroller.</p>
+                <a href="microcontroller.html" target="_blank" class="btn btn-primary">view project</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/mini-project.jpg" class="card-img-top project-image" alt="Gesture control robot">
+              <div class="card-body">
+                <h3 class="card-title">Gesture control robot</h3>
+                <p class="card-text">Built Gesture control robot using atmega controller and accelerometer.</p>
+                <a href="./mini-project.pdf" target="_blank" class="btn btn-primary">view project</a>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-
   </section>
-
   <!-- END PROJECTS SECTION -->
 
   <!-- PROGRAMMING MATERIAL SECTION -->
 
-  <section id="programing" class="programing-section">
+  <section class="programming-section" id="programing">
+    <div class="container-fluid text-center">
+      <h2 class="section-heading">Programing Material</h2>
 
-    <h2 class="programing-section-header">Programing Material</h2>
-    <div class="programing-grid">
-      <a href="impcode.html" target="_blank" class="programing project-tile">
-        <p class="programing-title">
-          <span class="code">&lt;</span>
-          BASIC IMPORTANT CODES
-          <span class="code">&gt;</span>
-        </p>
-      </a>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="d-grid gap-2">
+            <a href="impcode.html" target="_blank" class="btn btn-danger programming-btn">
+              <span class="code">&lt;</span>
+              BASIC IMPORTANT CODES
+              <span class="code">&gt;</span>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-grid gap-2">
+            <a href="algorithms.html" target="_blank" class="btn btn-danger programming-btn">
+              <span class="code">&lt;</span>
+              ALGORITHMS
+              <span class="code">&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <a href="algorithms.html" target="_blank" class="programing project-tile">
-        <p class="programing-title">
-          <span class="code">&lt;</span>
-          ALGORITHMS
-          <span class="code">&gt;</span>
-        </p>
-      </a>
     </div>
   </section>
 
   <!-- END PROGRAMMING MATERIAL SECTION -->
 
-
-
-
   <!-- START CONTACT SECTION -->
 
-  <section id="contact" class="contact-section">
-    <div class="contact-section-header">
-      <h2>You can contact me on</h2>
+  <section class="contact-section" id="contact">
+    <div class="container-fluid text-center">
+      <h2 class="section-heading">You can contact me on</h2>
+      <div class="contact-details">
 
-    </div>
-    <div class="contact-links">
+        <a id="profile-link" href="https://github.com/ChetanDehane" target="_blank" class="btn contact-links"><i
+            class="fab fa-github"></i> GitHub</a>
+        <a id="profile-link" href="https://www.linkedin.com/in/chetan-dehane-3651551aa/" target="_blank"
+          class="btn contact-links"><i class="fab fa-linkedin"></i> linkedin</a>
+        <a id="profile-link" href="https://twitter.com/chetan20031999" target="_blank" class="btn contact-links"><i
+            class="fab fa-twitter"></i> Twitter</a>
+        <a id="profile-link" href="https://www.instagram.com/chetan_dehane/" target="_blank"
+          class="btn contact-links">
+          <i class="fab fa-instagram"></i> Instagram</a>
 
-      <a id="profile-link" href="https://github.com/ChetanDehane" target="_blank" class="btn contact-details"><i
-          class="fab fa-github"></i> GitHub</a>
-      <a id="profile-link" href="https://www.linkedin.com/in/chetan-dehane-3651551aa/" target="_blank"
-        class="btn contact-details"><i class="fab fa-linkedin"></i> linkedin</a>
-      <a id="profile-link" href="https://twitter.com/chetan20031999" target="_blank" class="btn contact-details"><i
-          class="fab fa-twitter"></i> Twitter</a>
-      <a id="profile-link" href="https://www.instagram.com/chetan_dehane/" target="_blank" class="btn contact-details">
-        <i class="fab fa-instagram"></i> Instagram</a>
+        <a id="profile-link" href="mailto:chetandehane007@gmail.com" target="_blank" class="btn contact-links">
+          <i class="fas fa-envelope"></i> Mail</a>
 
-      <a id="profile-link" href="mailto:chetandehane007@gmail.com" target="_blank" class="btn contact-details">
-        <i class="fas fa-envelope"></i> Mail</a>
-
-
-    </div>
-  </section>
-  <section id="contribution" class="contribution-section">
-    <div class="contribution-section-header">
-      <h2> you can also contribute to my work by Donating</h2>
-    </div>
-    <div class="contribution-links">
-
-      <a id="contribution-link" href="" target="_blank" class="btn contribution-details"><i class="fab fa-paypal"></i>
-        Paypal</a>
-      <a id="contribution-link" href="" target="_blank" class="btn contribution-details"><i class="fab fa-bitcoin"></i>
-        Bitcoin</a>
-      <a id="contribution-link" href="" target="_blank" class="btn contribution-details">
-        <i class="far fa-credit-card"></i> Card</a>
-
-
+      </div>
     </div>
   </section>
 
@@ -221,13 +264,19 @@
 
   <!-- START FOOTER SECTION -->
 
-  <footer>
-    <p>
-      &copy; chetandehane
-    </p>
+  <footer class="footer-section">
+    <div class="container-fluid text-center">
+      <p>&copy; chetandehane</p>
+      <p>Made with &#10084;&#65039; in india.</p>
+      <p>2020</p>
+    </div>
   </footer>
 
   <!-- END FOOTER SECTION -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/java.js"></script>
 </body>
 
 </html>

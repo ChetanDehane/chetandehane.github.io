@@ -2,11 +2,13 @@ body {
 
   font-family: 'Poppins', 'Raleway', sans-serif;
   font-size: 1.2rem;
+  background-color: #ddd;
 }
 
 #darkmodebutton {
   display: inline-block;
-  float: right;
+  position: absolute;
+  right: 1rem;
   padding: 1% 2%;
   font-size: 1rem;
   cursor: pointer;
@@ -50,6 +52,8 @@ table {
 h1 {
   font-size: bolder;
   font-size: xx-large;
+  text-align: center;
+  padding-top: 3rem;
 }
 
 h2 {
